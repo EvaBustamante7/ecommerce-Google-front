@@ -1,0 +1,9 @@
+@import '../../../index-css/_colors.scss';
+
+.prueba {
+    z-index: 1;
+    background: $red;
+    h1{
+        color: $blue;
+    }
+}
