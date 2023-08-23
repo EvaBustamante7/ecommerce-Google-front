@@ -14,8 +14,8 @@ footer {
     text-align: center;
     position: absolute;
     bottom: 0;
-
-
+    overflow-y: auto; /* Agrega desplazamiento vertical en modo responsive */
+  max-height: calc(100vh - 30px); /* Establece la altura máxima para el footer */
 }
 
 
