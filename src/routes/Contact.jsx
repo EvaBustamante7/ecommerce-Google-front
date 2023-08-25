@@ -1,9 +1,15 @@
 import React from 'react'
-import Contact_form from '../components/contact_form/Contact_form'
+import ContactForm from '../components/contact_form/Contact_form'
+import Footer from '../components/footer/Footer'
+import Navbar from '../components/navbar/Navbar'
 
 const Contact = () => {
   return (
-    <Contact_form/>
+    <>      
+      <Navbar />
+      <ContactForm />
+      <Footer />
+    </>
   )
 }
 
