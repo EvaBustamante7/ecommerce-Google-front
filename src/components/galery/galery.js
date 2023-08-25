@@ -130,18 +130,20 @@ export function Gallery(props) {
           o.material.roughness = 0
           o.material.map = paint
         }
-        if (o.name === 'object1') {
-          objectScene.traverse((object) => {
-            if (object.isMesh && object.name === 'object1') {
-              object.position.set(1, 1, 1); // Cambia las coordenadas de posición según tu necesidad
-              object.scale.set(1, 1.5, 1); // Cambia los valores de escala según tu necesidad
-            }
-          });
-        }
+        
+            
+          
       }
     });
   });
-
+ 
+  
+  
+  
+  
+  
+  
+  
   
   return (
     <>
