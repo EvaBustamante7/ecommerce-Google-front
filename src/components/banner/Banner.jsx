@@ -1,38 +1,26 @@
-import React from 'react'
-import "./css/Banner.css"
+import React from 'react';
+import PropTypes from 'prop-types';
+import './css/Banner.css';
 
-function Banner() {
+const Banner = ({ title, message, imageUrl }) => {
   return (
-    <React.Fragment>
-
-      <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
-        <div className="carousel-inner">
-
-          <div className="carousel-item active">
-            <img src={Banner1} className="d-block w-100" alt='...' />
-          </div>
-
-          <div className="carousel-item ">
-            <img src={Banner2} className="d-block w-100" alt='...' />
-          </div>
-
-          <div className="carousel-item ">
-            <img src={Banner3} className="d-block w-100" alt='...' />
-          </div>
-
-
+    <div className="banner">
+      <div className="banner-content">
+        <div className="banner-text">
+          <h1 className="banner-title">{title}</h1>
+          <p className="banner-message">{message}</p>
         </div>
-        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-          <span className="carousel-control-next-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Next</span>
-        </button>
+        <div className="banner-image">
+          <img src={imageUrl} alt="Banner" />
+        </div>
       </div>
-    </React.Fragment>
-  )
+    </div>
+  );
 };
 
-export default Banner
+Banner.propTypes = {
+  title: PropTypes.string.isRequired,
+  message: PropTypes.string.isRequired,
+  imageUrl: PropTypes.string.isRequired,
+};
+export default Banner;
