@@ -1,9 +1,80 @@
 @import '../../../index-css/_colors.scss';
 
-.prueba {
-    z-index: 1;
-    background: $red;
-    h1{
-        color: $blue;
+.header {
+    // position: fixed;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    z-index: 10;
+    background-color: #f2f2f2;
+}
+
+#logo {
+    width: 250px;
+    height: 150px;
+   
+}
+/*Efecto navbar*/
+.header-bg {
+    background-color: blue;
+    opacity: 0.85;
+    transition: .5s;
+}
+
+.nav-menu {
+    display: flex;
+}
+
+.nav-menu li {
+    padding: 0 1rem;
+}
+
+.nav-menu a {
+    font-size: x-large;
+    font-weight: 500;
+}
+
+.hamburger {
+    display: none;
+}
+
+@media screen and (max-width:768px) {
+    .hamburger {
+        display: block;
+    }
+    #logo {
+        width: 150px;
+        height: 70px;
+        margin-bottom: 50px;
+    }
+    .nav-menu {
+        position: fixed; /* Cambiado a "fixed" para permitir el scroll */
+        top: 0;
+        left: -100%;
+        text-align: center;
+        width: 100%;
+        height: 100vh;
+        transition: 0.3s;
+        z-index: -1;
+        background: rgba(0, 0, 0, 0.9);
+        overflow-y: auto; /* Agregado para permitir el scroll */
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-menu li {
+        padding: 1rem 0;
+    }
+
+    .nav-menu a {
+        font-size: 2rem;
     }
 }
+    
+    
+ 
