@@ -1,1 +1,64 @@
-/*# sourceMappingURL=Banner.css.map */
+.banner-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 50px auto;
+}
+
+.text-content,
+.banner-content {
+  flex: 1;
+  position: relative;
+  background-color: #3498db;
+  color: white;
+  padding: 20px;
+  transition: transform 0.5s;
+}
+
+.banner-container:hover .text-content {
+  transform: rotateY(-20deg);
+}
+
+.banner-container:hover .banner-content {
+  transform: rotateY(20deg);
+}
+
+.text {
+  font-size: 36px;
+  margin: 0;
+  transform-style: preserve-3d;
+  transform: translateZ(50px);
+}
+
+.banner-content h2,
+.banner-content p,
+.banner-content button {
+  position: relative;
+  text-align: center;
+}
+
+.banner-content h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.banner-content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.banner-content button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.banner-content button:hover {
+  background-color: #c0392b;
+}/*# sourceMappingURL=Banner.css.map */
