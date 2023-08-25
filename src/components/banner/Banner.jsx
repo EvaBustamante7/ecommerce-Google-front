@@ -9,15 +9,15 @@ function Banner() {
         <div className="carousel-inner">
 
           <div className="carousel-item active">
-            <img src={Banner1} className="d-block w-100" alt='...' />
+            <img src={''} className="d-block w-100" alt='...' />
           </div>
 
           <div className="carousel-item ">
-            <img src={Banner2} className="d-block w-100" alt='...' />
+            <img src={''} className="d-block w-100" alt='...' />
           </div>
 
           <div className="carousel-item ">
-            <img src={Banner3} className="d-block w-100" alt='...' />
+            <img src={''} className="d-block w-100" alt='...' />
           </div>
 
 
