@@ -2,43 +2,46 @@
 /*Paleta clara*/
 .banner {
   display: flex;
-  justify-content: center;
   align-items: center;
-  background-color: #3498db;
-  color: #fff;
-  height: 100vh;
-}
-
-.banner-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 80%;
-  max-width: 1200px;
-}
-
-.banner-text {
-  flex: 1;
   padding: 20px;
-  text-align: center;
 }
-
-.banner-title {
-  font-size: 36px;
+.banner .info {
+  flex: 1;
+  padding-right: 20px;
+}
+.banner .info h2 {
+  font-size: 24px;
   margin-bottom: 10px;
 }
-
-.banner-message {
-  font-size: 18px;
+.banner .info p {
+  font-size: 16px;
+  margin-bottom: 20px;
 }
-
-.banner-image {
-  flex: 1;
-  padding: 20px;
-  text-align: center;
+.banner .info button {
+  background-color: #4186C7;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
-
-.banner-image img {
+.banner .info button:hover {
+  background-color: #4186C7;
+}
+.banner .img {
+  flex: 2;
+  text-align: right;
+}
+.banner .img img {
   max-width: 100%;
   height: auto;
+}
+@media (max-width: 768px) {
+  .banner {
+    flex-direction: column;
+  }
+  .banner .info, .banner .img {
+    text-align: center;
+  }
 }/*# sourceMappingURL=Banner.css.map */

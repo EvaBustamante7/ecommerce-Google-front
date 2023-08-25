@@ -2,25 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './css/Banner.css';
 
-const Banner = ({ title, message, imageUrl }) => {
+const Banner = () => {
   return (
     <div className="banner">
-      <div className="banner-content">
-        <div className="banner-text">
-          <h1 className="banner-title">{title}</h1>
-          <p className="banner-message">{message}</p>
-        </div>
-        <div className="banner-image">
-          <img src={imageUrl} alt="Banner" />
-        </div>
+      <div className="info">
+        <h2>Información de la Compañía</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam efficitur turpis at lacus cursus, eget lacinia libero volutpat.</p>
+        <button>Leer más</button>
+      </div>
+      <div className="img">
+        <img src="img.jpg" alt="Imagen del banner" />
       </div>
     </div>
   );
-};
-
-Banner.propTypes = {
-  title: PropTypes.string.isRequired,
-  message: PropTypes.string.isRequired,
-  imageUrl: PropTypes.string.isRequired,
-};
+}
 export default Banner;

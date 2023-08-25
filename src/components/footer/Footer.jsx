@@ -13,11 +13,11 @@ const Footer = () => {
         <a href="https://twitter.com/?lang=es" className="icon"><FontAwesomeIcon icon={faTwitter} /></a>
         <a href="https://www.instagram.com/" className="icon"><FontAwesomeIcon icon={faInstagram} /></a>
         <a href="https://www.linkedin.com/" className="icon"><FontAwesomeIcon icon={faLinkedin} /></a>
-    </div>
+      </div>
 
-    <div className="footer-container">
+      <div className="footer-container">
         <div className="footer-logo">
-        <img src={logo} alt="Company Logo" />
+          <img src={Logo} alt="Logo G3da" />
         </div>
 
       <div className="footer-content">

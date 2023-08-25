@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import './css/Contact_form.css';
 import ReCAPTCHA from 'react-google-recaptcha';
 
-const Contact_form = () => {
+const ContactForm = () => {
   const captcha = useRef(null);
 
   const handleSubmit = (e) => {
@@ -41,4 +41,4 @@ const Contact_form = () => {
   );
 };
 
-export default Contact_form;
+export default ContactForm;
