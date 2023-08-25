@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*Paleta oscura*/
 /*Paleta clara*/
 label {
@@ -5,12 +6,15 @@ label {
 }
 
 form {
-  display: flex;
-  flex-direction: column;
   padding: 1rem;
   margin: auto;
   margin-top: 3%;
   max-width: 600px;
+  box-sizing: border-box; /* Añadido para incluir el padding en el ancho */
+  overflow-y: auto; /* Añadido para permitir el scroll si el formulario es largo */
+  height: calc(100vh - 90px); /* Ajustado para ocupar el espacio vertical disponible */
+  display: flex;
+  flex-direction: column;
 }
 
 form label {
