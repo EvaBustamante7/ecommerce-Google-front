@@ -22,7 +22,7 @@ const Form = () => {
         console.log('enviando datos...' + datos.user + ' ' + datos.pass)
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
-       // myHeaders.append("Cookie", "Authorization=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2OTI4MjE2MDMsImV4cCI6MTY5MjgyNTIwMywicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoicGVwZUBob3RtYWlsLmNvbSJ9.josQRblVEh8fC9snZiS0FlrhediURIITNSKR90LcRlOc7R5_-hCVP90YHMgIeM2jizq0hPmhGtOcl1WwsOhOf4ZMok0wXBUJKSEhQ_FCy4CosGWQUrrd0K1zK7O2oLVEvqLb73WvvyhUypCwQ0f9xbjogFcpzN8Rsf8LGXlWced5Hko49KsElv5V64GcxmE37IIXtucu-C0zAjuxwkGrDwj188s6r_-W-mAQCztOMBePKjwDDivjDs2K3Vr1Pm66tekQ3oanCspYqd4l_GTiDSfNiaS3nBVFaApEDP_Nl38Dh4K-dLXvRZiVgoog_-LZ40l5vYF5j5ZhCHx9CZjKaw");
+        //myHeaders.append("Cookie", "Authorization=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2OTI4MjE2MDMsImV4cCI6MTY5MjgyNTIwMywicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoicGVwZUBob3RtYWlsLmNvbSJ9.josQRblVEh8fC9snZiS0FlrhediURIITNSKR90LcRlOc7R5_-hCVP90YHMgIeM2jizq0hPmhGtOcl1WwsOhOf4ZMok0wXBUJKSEhQ_FCy4CosGWQUrrd0K1zK7O2oLVEvqLb73WvvyhUypCwQ0f9xbjogFcpzN8Rsf8LGXlWced5Hko49KsElv5V64GcxmE37IIXtucu-C0zAjuxwkGrDwj188s6r_-W-mAQCztOMBePKjwDDivjDs2K3Vr1Pm66tekQ3oanCspYqd4l_GTiDSfNiaS3nBVFaApEDP_Nl38Dh4K-dLXvRZiVgoog_-LZ40l5vYF5j5ZhCHx9CZjKaw");
 
         var raw = JSON.stringify({
             "username": datos.user,
@@ -33,7 +33,8 @@ const Form = () => {
             method: 'POST',
             headers: myHeaders,
             body: raw,
-            redirect: 'follow'
+            redirect: 'follow',
+            mode: 'no-cors'
         };
 
         function saveToken(result) {
@@ -46,7 +47,8 @@ const Form = () => {
         }
 
         fetch(urlLogin+"/api/login_check", requestOptions)
-            .then(response => response.text())
+        
+            .then(response => console.log(response))
             .then(result => saveToken(result))
             .catch(error => console.log('error', error));
     }
