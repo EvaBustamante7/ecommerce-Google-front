@@ -1,19 +1,30 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './css/Banner.css';
+import { OrbitControls, useGLTF } from '@react-three/drei';
+import escultura from './img/escultura2.jpg';
+import escultura2 from './img/ARCO.jpg';
 
 const Banner = () => {
   return (
-    <div className="banner">
-      <div className="info">
+    <div className="banner-container">
+      <div className="info-container">
         <h2>Información de la Compañía</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam efficitur turpis at lacus cursus, eget lacinia libero volutpat.</p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam efficitur turpis at lacus cursus, eget lacinia
+          libero volutpat.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam efficitur turpis at lacus cursus, eget lacinia
+          libero volutpat.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam efficitur turpis at lacus cursus, eget lacinia
+          libero volutpat.
+        </p>
         <button>Leer más</button>
       </div>
-      <div className="img">
-        <img src="img.jpg" alt="Imagen del banner" />
+      <div className="image-container">
+        <img src={escultura2} alt="escultura Img" />
       </div>
     </div>
   );
-}
+};
+
 export default Banner;
+

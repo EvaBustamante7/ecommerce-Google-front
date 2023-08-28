@@ -1,22 +1,36 @@
 @import '../../../index-css/_colors.scss';
-
-.banner {
+.banner-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   padding: 20px;
-  
-  .info {
+  border-radius: 20px;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+
+  .info-container {
     flex: 1;
-    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: $white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px $black;
+    margin-top: 10px;
+    width: 50%;
 
     h2 {
       font-size: 24px;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
 
     p {
-      font-size: 16px;
-      margin-bottom: 20px;
+      font-size: 18px;
     }
 
     button {
@@ -24,31 +38,32 @@
       color: $white;
       border: none;
       padding: 10px 20px;
-      font-size: 16px;
+      margin-top: 20px;
       cursor: pointer;
-      transition: background-color 0.3s;
-      
-      &:hover {
-        background-color: $blue;
-      }
+    }
+
+    @media (min-width: 768px) {
+      margin-top: 10px;
+      margin-left: 30px;
+      align-items: flex-start;
+      text-align: left;
     }
   }
 
-  .img {
-    flex: 2;
-    text-align: right;
+  .image-container {
+    width: 50%;
+    overflow: hidden;
 
     img {
-      max-width: 100%;
-      height: auto;
+      width: 60%;
+      height: 60%;
+      object-fit: cover;
+      border-radius: 10px;
     }
-  }
 
-  @media (max-width: 768px) {
-    flex-direction: column;
-    
-    .info, .img {
-      text-align: center;
+    @media (max-width: 768px) {
+      order: -1;
+      width: 90%;
     }
   }
 }
