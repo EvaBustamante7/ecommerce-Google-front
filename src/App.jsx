@@ -11,6 +11,7 @@ function App() {
         <Route path='/' element={<Home/>} />
         <Route path='/inmersiva' element={<Inmersiva/>} />
       
+      
       </Routes>
     </div>
   );

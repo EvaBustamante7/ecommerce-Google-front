@@ -14,8 +14,6 @@ import { RepeatWrapping } from 'three'
 export function Gallery(props) {
   const { scene: galleryScene } = useGLTF(process.env.PUBLIC_URL + 'models/gallery.glb ' )
 
-  const { scene: objectScene } = useGLTF(process.env.PUBLIC_URL + 'models/object1.glb');
-
   const [woodColor, woodRoughness, woodMetalness, woodNormal] = useTexture([
     process.env.PUBLIC_URL + 'textures/wood/woodmat_Base_Color.png',
     process.env.PUBLIC_URL + 'textures/wood/woodmat_Roughness.png',
@@ -137,19 +135,11 @@ export function Gallery(props) {
     });
   });
  
-  
-  
-  
-  
-  
-  
-  
-  
   return (
     <>
       {/* Render the loaded scenes */}
       <primitive object={galleryScene} {...props} />
-      <primitive object={objectScene} />
+    
     </>
   );
 }

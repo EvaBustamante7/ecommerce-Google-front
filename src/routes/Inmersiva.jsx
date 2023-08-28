@@ -5,6 +5,7 @@ import { Gallery } from '../components/galery/galery'
 import { Floor } from '../components/galery/floor'
 
 import '../components/galery/style.css'
+import { Object1 } from '../components/galery/object1'
 
 function Inmersiva() {
   return (
@@ -16,8 +17,17 @@ function Inmersiva() {
       >
         <group>
           <Gallery />
+          
           <Floor />
+
         </group>
+        
+          <Object1 position={[0, 0, 0]} scale={[1, 1, 1]} />
+       
+
+
+
+
         <ambientLight intensity={0.3} />
         <Environment
           path={process.env.PUBLIC_URL + 'textures/'}
