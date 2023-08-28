@@ -1,0 +1,39 @@
+/* tipografia font-family: 'Alkatra', cursive;'Oswald', sans-serif;'Outfit', sans-serif;'Roboto', sans-serif;'Tillana', cursive;
+ */
+@import url("https://fonts.googleapis.com/css2?family=Alkatra&family=Oswald:wght@400;700&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Tillana:wght@400;600;700&display=swap");
+/* para usar : @include title; */
+/* para usar : @include text; */
+/*Paleta oscura*/
+/*Paleta clara*/
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+* body h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 40px;
+  color: #3b3e40;
+}
+* body h2, * body h3, * body h4, * body label {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  letter-spacing: -1px;
+  line-height: 40px;
+  color: #61676b;
+}
+* body p, * body a {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 24px;
+  color: #232222;
+}
+* code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,138 @@
+@import '../../../index-css/_colors.scss';
+
+
+/* Footer styling */
+footer {
+    background-color: $color_footer;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+    max-height: calc(100vh - 30px);
+    /* Establece la altura máxima para el footer */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.footer-logo {
+    img {
+        width: 250px;
+        height: 250px;
+        padding: 0 0 60px 50px;
+    }
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    padding-top: 50px;
+
+    .icon {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        margin: 0 10px;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50%;
+        background-color:$blue;
+        /* Google Blue */
+        color: $white;
+        margin-right: 10px;
+
+        i {
+            font-size: 18px;
+            margin: 10px;
+        }
+    }
+}
+
+.footer-content {
+    padding: 10px;
+    box-sizing: border-box;
+
+    /* Estilo para los enlaces */
+    a {
+        display: block;
+        color: $black;
+        /* Color inicial */
+        text-decoration: none;
+        padding: 5px 0;
+        transition: color 0.3s;
+        /* Transición de color en 0.3 segundos */
+
+        /* Estilo al pasar el ratón sobre los enlaces */
+        &:hover {
+            color: $black;
+            /* Color más intenso (negro con opacidad) */
+        }
+    }
+
+    a+a {
+        margin-top: 10px;
+    }
+}
+
+.h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Adding space between each paragraph */
+.footer-content a {
+    margin-bottom: 10px;
+}
+
+.bottom-bar {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid $black;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+a {
+    margin: 0 5px;
+    color: $black;
+    text-decoration: none;
+
+    &:hover {
+        font-weight: bold;
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        position: static;
+        max-height: fit-content;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        img{
+            padding:0;
+            margin: 0;
+            height: 150px;
+        }
+    }
+
+    .social-icons {
+        margin-top: 20px;
+        padding: 35px 0 0 0;
+    }
+
+}
