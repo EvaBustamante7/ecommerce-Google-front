@@ -1,7 +1,6 @@
 import React from 'react';
 import './css/Banner.css';
 import { OrbitControls, useGLTF } from '@react-three/drei';
-import escultura from './img/escultura2.jpg';
 import escultura2 from './img/ARCO.jpg';
 
 const Banner = () => {
