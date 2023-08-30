@@ -3,12 +3,12 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './css/Carrusel.css';
-import imagen1 from './img/imagen1.jpg';
-import imagen2 from './img/imagen2.jpg';
-import imagen3 from './img/imagen3.jpg';
-import imagen4 from './img/imagen4.jpg';
-import imagen5 from './img/escultura1.jpg';
-import imagen6 from './img/escultura3.jpeg';
+import imagen1 from '../assets/imagen1.jpg';
+import imagen2 from '../assets/imagen2.jpg';
+import imagen3 from '../assets/imagen3.jpg';
+import imagen4 from '../assets/imagen4.jpg';
+import imagen5 from '../assets/escultura1.jpg';
+import imagen6 from '../assets/escultura3.jpeg';
 
 
 const Carousel = () => {
@@ -16,13 +16,13 @@ const Carousel = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3, // Mostrar 3 imágenes en pantalla normal
+    slidesToShow: 3, 
     slidesToScroll: 1,
     responsive: [
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 1, // Cambiar a 1 imagen en modo responsive
+          slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
