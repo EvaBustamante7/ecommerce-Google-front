@@ -1,69 +1,82 @@
 @import '../../../index-css/_colors.scss';
-.banner-container {
+.contenedor {
+  width: 195%;
+  max-width: 1120px;
+  margin: 50px 180px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  //grid-template-rows: auto auto;
+  grid-template-areas:
+    "widget-1 widget-2";
+}
+
+.widget-1,
+.widget-2 {
+  background: $blue_2;
+  height: 399px;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-  border-radius: 20px;
-  text-align: center;
-
-  @media (min-width: 768px) {
-    flex-direction: row;
-  }
-
-  .info-container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    background-color: $white;
-    border-radius: 20px;
-    box-shadow: 0px 0px 5px $black;
-    margin-top: 10px;
-    width: 50%;
-
-    h2 {
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-
-    p {
-      font-size: 18px;
-    }
-
-    button {
-      background-color: $blue;
-      color: $white;
-      border: none;
-      padding: 10px 20px;
-      margin-top: 20px;
-      cursor: pointer;
-    }
-
-    @media (min-width: 768px) {
-      margin-top: 10px;
-      margin-left: 30px;
-      align-items: flex-start;
-      text-align: left;
-    }
-  }
-
-  .image-container {
-    width: 50%;
-    overflow: hidden;
-
-    img {
-      width: 60%;
-      height: 60%;
-      object-fit: cover;
-      border-radius: 10px;
-    }
-
-    @media (max-width: 768px) {
-      order: -1;
-      width: 90%;
-    }
-  }
+  justify-content: center;
+  border-radius: 10px;
+  overflow: hidden;
 }
+
+.widget-1 img,
+.widget-2 img {
+  max-width: 150%;
+  max-height: 99%;
+  object-fit: cover;
+}
+
+.widget-1 {
+  grid-area: widget-1;
+}
+
+.widget-2 {
+  grid-area: widget-2;
+}
+.widget-1 button {
+  background-color: #55a8fd;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.widget-1 button:hover {
+  background-color: #4287e0;
+}
+
+@media screen and (max-width: 768px) {
+  .contenedor {
+    grid-template-areas:
+      "widget-2"
+      "widget-1";
+      margin-inline: 50px;
+  }
+  .widget-2 {   
+    margin-left: 4px;
+  }
+  .widget-1 {
+    padding: 5px;
+    margin-left: 4px;
+  }
+
+  .widget-1 h2 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+  }
+
+  .widget-1 p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+
+  .widget-1 button {
+    padding: 8px 16px;
+  }
+} 
