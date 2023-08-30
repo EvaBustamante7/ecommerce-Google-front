@@ -1,64 +1,79 @@
-.banner-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px;
-  margin: 50px auto;
+/*Paleta oscura*/
+/*Paleta clara*/
+.contenedor {
+  width: 195%;
+  max-width: 1120px;
+  margin: 50px 180px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "widget-1 widget-2";
 }
 
-.text-content,
-.banner-content {
-  flex: 1;
-  position: relative;
-  background-color: #3498db;
-  color: white;
-  padding: 20px;
-  transition: transform 0.5s;
-}
-
-.banner-container:hover .text-content {
-  transform: rotateY(-20deg);
-}
-
-.banner-container:hover .banner-content {
-  transform: rotateY(20deg);
-}
-
-.text {
-  font-size: 36px;
-  margin: 0;
-  transform-style: preserve-3d;
-  transform: translateZ(50px);
-}
-
-.banner-content h2,
-.banner-content p,
-.banner-content button {
-  position: relative;
+.widget-1,
+.widget-2 {
+  background: #EFEAE5;
+  height: 399px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-.banner-content h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
+.widget-1 img,
+.widget-2 img {
+  max-width: 150%;
+  max-height: 99%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-.banner-content p {
-  font-size: 16px;
-  margin-bottom: 20px;
+.widget-1 {
+  grid-area: widget-1;
 }
 
-.banner-content button {
-  background-color: #e74c3c;
-  color: white;
+.widget-2 {
+  grid-area: widget-2;
+}
+
+.widget-1 button {
+  background-color: #55a8fd;
+  color: #fff;
   border: none;
   padding: 10px 20px;
-  font-size: 16px;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
-.banner-content button:hover {
-  background-color: #c0392b;
+.widget-1 button:hover {
+  background-color: #4287e0;
+}
+
+@media screen and (max-width: 768px) {
+  .contenedor {
+    grid-template-areas: "widget-2" "widget-1";
+    margin-inline: 50px;
+  }
+  .widget-2 {
+    margin-left: 4px;
+  }
+  .widget-1 {
+    padding: 5px;
+    margin-left: 4px;
+  }
+  .widget-1 h2 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+  }
+  .widget-1 p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  .widget-1 button {
+    padding: 8px 16px;
+  }
 }/*# sourceMappingURL=Banner.css.map */

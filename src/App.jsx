@@ -4,6 +4,8 @@ import Home from './routes/Home';
 import Contact from './routes/Contact';
 import Inmersiva from './routes/Inmersiva';
 import Login from './routes/Login';
+import Obj3d from './routes/Obj3d'
+
 
 
 
@@ -15,7 +17,7 @@ function App() {
         <Route path='/contact' element={<Contact/>} />
         <Route path='/inmersiva' element={<Inmersiva/>} />
         <Route path='/login' element={<Login/>} />
-      
+        <Route path='/objeto' element={<Obj3d/>} />
 
       </Routes>
     </div>

@@ -1,38 +1,18 @@
-import React from 'react'
-import "./css/Banner.css"
+import React from 'react';
+import './css/Banner.css';
 
-function Banner() {
+const Banner = (props) => {
   return (
-    <React.Fragment>
-
-      <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
-        <div className="carousel-inner">
-
-          <div className="carousel-item active">
-            <img src={''} className="d-block w-100" alt='...' />
-          </div>
-
-          <div className="carousel-item ">
-            <img src={''} className="d-block w-100" alt='...' />
-          </div>
-
-          <div className="carousel-item ">
-            <img src={''} className="d-block w-100" alt='...' />
-          </div>
-
-
-        </div>
-        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-          <span className="carousel-control-next-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Next</span>
-        </button>
+    <div className="contenedor">
+      <div className="widget-1">
+        <h2>{props.title}</h2>
+        <p>{props.text}</p>
+        <button>Leer más</button>
       </div>
-    </React.Fragment>
-  )
+      <div className="widget-2">
+        <img src={props.image} alt="Imagen" />
+      </div>
+    </div>   
+  );
 };
-
-export default Banner
+export default Banner;

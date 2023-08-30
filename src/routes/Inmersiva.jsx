@@ -6,9 +6,13 @@ import { Floor } from '../components/galery/floor'
 
 import '../components/galery/style.css'
 
+
+
 function Inmersiva() {
   return (
     <Suspense fallback={null}>
+       
+     
       <Canvas
         shadows
         dpr={[1, 1.5]}
@@ -16,8 +20,10 @@ function Inmersiva() {
       >
         <group>
           <Gallery />
+
           <Floor />
         </group>
+
         <ambientLight intensity={0.3} />
         <Environment
           path={process.env.PUBLIC_URL + 'textures/'}
@@ -25,6 +31,7 @@ function Inmersiva() {
         />
         <OrbitControls makeDefault />
       </Canvas>
+      
     </Suspense>
   )
 }
