@@ -5,11 +5,14 @@ import { Gallery } from '../components/galery/galery'
 import { Floor } from '../components/galery/floor'
 
 import '../components/galery/style.css'
-import { Object1 } from '../components/galery/object1'
+
+
 
 function Inmersiva() {
   return (
     <Suspense fallback={null}>
+       
+     
       <Canvas
         shadows
         dpr={[1, 1.5]}
@@ -17,16 +20,9 @@ function Inmersiva() {
       >
         <group>
           <Gallery />
-          
+
           <Floor />
-
         </group>
-        
-          <Object1 position={[0, 0, 0]} scale={[1, 1, 1]} />
-       
-
-
-
 
         <ambientLight intensity={0.3} />
         <Environment
@@ -35,6 +31,7 @@ function Inmersiva() {
         />
         <OrbitControls makeDefault />
       </Canvas>
+      
     </Suspense>
   )
 }
