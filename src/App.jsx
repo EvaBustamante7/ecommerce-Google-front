@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './routes/Home';
 import Contact from './routes/Contact';
 import Inmersiva from './routes/Inmersiva';
+import Obj3d from './routes/Obj3d'
 
 
 
@@ -13,7 +14,7 @@ function App() {
         <Route path='/' element={<Home/>} />
         <Route path='/contact' element={<Contact/>} />
         <Route path='/inmersiva' element={<Inmersiva/>} />
-
+        <Route path='/objeto' element={<Obj3d/>} />
       </Routes>
     </div>
   );
