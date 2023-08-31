@@ -43,12 +43,13 @@
 
 @media screen and (max-width:768px) {
     .hamburger {
-        display: block;
+        display: flex;
+        margin-right: 40px;
     }
     #logo {
-        width: 150px;
-        height: 70px;
-        margin-bottom: 50px;
+        width: 200px;
+        height: 100px;
+        margin-left: -5px;
     }
     .nav-menu {
         position: fixed; /* Cambiado a "fixed" para permitir el scroll */
