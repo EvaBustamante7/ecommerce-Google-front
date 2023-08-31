@@ -4,6 +4,7 @@ import Home from './routes/Home';
 import Contact from './routes/Contact';
 import Inmersiva from './routes/Inmersiva';
 import Login from './routes/Login';
+import Products from './components/Products/Products';
 
 
 
@@ -15,9 +16,7 @@ function App() {
         <Route path='/contact' element={<Contact/>} />
         <Route path='/inmersiva' element={<Inmersiva/>} />
         <Route path='/login' element={<Login/>} />
-      
->>>>>>>>> Temporary merge branch 2
-
+        <Route path='/products' element={<Products/>} />
       </Routes>
     </div>
   );
