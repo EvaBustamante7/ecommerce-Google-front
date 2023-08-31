@@ -22,11 +22,16 @@ const Form = () => {
              event.preventDefault()
         
 
-            var raw = JSON.stringify({
-                "username":datos.user,
-                "password":datos.pass
+            // var raw = JSON.stringify({
+            //     "username":datos.user,
+            //     "password":datos.pass
                
-            });
+            // });
+            var raw = JSON.stringify({
+                "username": "pepito23@hotmail.com",
+                "password": "000000"
+              });
+              
 
            
 
