@@ -7,6 +7,8 @@ import Login from './routes/Login';
 import Products from './components/Products/Products';
 
 
+import Register from './components/register/Register'
+import Obj3d from './routes/Obj3d'
 
 function App() {
   return (
@@ -17,6 +19,9 @@ function App() {
         <Route path='/inmersiva' element={<Inmersiva/>} />
         <Route path='/login' element={<Login/>} />
         <Route path='/products' element={<Products/>} />
+        <Route path='/register' element={<Register/>} />
+        <Route path='/objeto' element={<Obj3d/>} />
+
       </Routes>
     </div>
   );
