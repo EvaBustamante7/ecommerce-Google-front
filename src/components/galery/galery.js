@@ -12,7 +12,7 @@ import { useFrame, useThree } from '@react-three/fiber'
 import { RepeatWrapping } from 'three'
 
 export function Gallery(props) {
-  const { scene } = useGLTF(process.env.PUBLIC_URL + 'models/gallery.glb')
+  const { scene: galleryScene } = useGLTF(process.env.PUBLIC_URL + 'models/gallery.glb ' )
 
   const [woodColor, woodRoughness, woodMetalness, woodNormal] = useTexture([
     process.env.PUBLIC_URL + 'textures/wood/woodmat_Base_Color.png',
@@ -67,7 +67,7 @@ export function Gallery(props) {
       pointer.x = (event.clientX / window.innerWidth) * 2 - 1
       pointer.y = -(event.clientY / window.innerHeight) * 2 + 1
       raycaster.setFromCamera(pointer, state.camera)
-      const intersects = raycaster.intersectObjects(scene.children)
+      const intersects = raycaster.intersectObjects(galleryScene.children)
       if (intersects.length > 0) {
         const object = intersects[0].object
         if (object.name.indexOf('paint') !== -1) {
@@ -94,8 +94,10 @@ export function Gallery(props) {
     window.addEventListener('pointerdown', onPointerDown)
   }, [])
 
+  
+  
   useLayoutEffect(() => {
-    scene.traverse((o) => {
+    galleryScene.traverse((o) => {
       if (o.isMesh) {
         if (o.name === 'Cube001_floormat_0') {
           o.visible = false
@@ -126,8 +128,18 @@ export function Gallery(props) {
           o.material.roughness = 0
           o.material.map = paint
         }
+        
+            
+          
       }
     });
-  })
-  return <primitive object={scene} {...props} />
+  });
+ 
+  return (
+    <>
+      {/* Render the loaded scenes */}
+      <primitive object={galleryScene} {...props} />
+    
+    </>
+  );
 }

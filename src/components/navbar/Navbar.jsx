@@ -27,16 +27,16 @@ const Navbar = () => {
                     <Link to='/'>Home</Link>
                 </li>
                 <li>
-                    <Link to='/inmersiva'>Inmersiva</Link>
+                    <Link to='/inmersiva'>3D Experience</Link>
                 </li>
                 <li>
-                    <Link to='/'>Productos</Link>
+                    <Link to='/'>Products</Link>
                 </li>
                 <li>
-                    <Link to='/contact'>Contacto</Link>
+                    <Link to='/contact'>Contact</Link>
                 </li>
                 <li>
-                    <Link to='/'>Carrito</Link>
+                    <Link to='/'>Shop</Link>
                 </li>
 
             </ul>

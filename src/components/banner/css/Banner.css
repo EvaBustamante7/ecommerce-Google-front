@@ -1,64 +1,68 @@
+/*Paleta oscura*/
+/*Paleta clara*/
 .banner-container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  width: 100%;
-  max-width: 1200px;
-  margin: 50px auto;
-}
-
-.text-content,
-.banner-content {
-  flex: 1;
-  position: relative;
-  background-color: #3498db;
-  color: white;
   padding: 20px;
-  transition: transform 0.5s;
-}
-
-.banner-container:hover .text-content {
-  transform: rotateY(-20deg);
-}
-
-.banner-container:hover .banner-content {
-  transform: rotateY(20deg);
-}
-
-.text {
-  font-size: 36px;
-  margin: 0;
-  transform-style: preserve-3d;
-  transform: translateZ(50px);
-}
-
-.banner-content h2,
-.banner-content p,
-.banner-content button {
-  position: relative;
+  border-radius: 20px;
   text-align: center;
 }
-
-.banner-content h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
+@media (min-width: 768px) {
+  .banner-container {
+    flex-direction: row;
+  }
 }
-
-.banner-content p {
-  font-size: 16px;
+.banner-container .info-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px #000000;
+  margin-top: 10px;
+  width: 50%;
+}
+.banner-container .info-container h2 {
+  font-size: 24px;
   margin-bottom: 20px;
 }
-
-.banner-content button {
-  background-color: #e74c3c;
-  color: white;
+.banner-container .info-container p {
+  font-size: 18px;
+}
+.banner-container .info-container button {
+  background-color: #4186C7;
+  color: #ffffff;
   border: none;
   padding: 10px 20px;
-  font-size: 16px;
+  margin-top: 20px;
   cursor: pointer;
-  transition: background-color 0.3s;
 }
-
-.banner-content button:hover {
-  background-color: #c0392b;
+@media (min-width: 768px) {
+  .banner-container .info-container {
+    margin-top: 10px;
+    margin-left: 30px;
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+.banner-container .image-container {
+  width: 50%;
+  overflow: hidden;
+}
+.banner-container .image-container img {
+  width: 60%;
+  height: 60%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+@media (max-width: 768px) {
+  .banner-container .image-container {
+    order: -1;
+    width: 90%;
+  }
 }/*# sourceMappingURL=Banner.css.map */

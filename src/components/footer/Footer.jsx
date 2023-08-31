@@ -7,7 +7,6 @@ import './css/Footer.css'; // Importa tu archivo CSS
 const Footer = () => {
   return (
     <footer>
-
       <div className="social-icons">
         <a href="https://www.facebook.com/" className="icon"><FontAwesomeIcon icon={faFacebook} /></a>
         <a href="https://twitter.com/?lang=es" className="icon"><FontAwesomeIcon icon={faTwitter} /></a>
@@ -19,6 +18,7 @@ const Footer = () => {
         <div className="footer-logo">
           <img src={Logo} alt="Logo G3da" />
         </div>
+
 
         <div className="footer-content">
           <h3>About Us</h3>
@@ -48,10 +48,9 @@ const Footer = () => {
           <a href="/#">Talk to a Specialist</a>
           <a href="/#">Visit our Help Center</a>
           <a href="/#">Buying on Artsy</a>
-
-
         </div>
       </div>
+
       <div className="bottom-bar">
         <p>&copy; 2023 your company. All rights reserved. <a href="/Platform terms">Platform terms.</a><a href="/ Privacy policy">Privacy policy.</a><a href="/ Cookie Policy"> Cookie Policy</a></p>
       </div>
