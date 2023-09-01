@@ -28,11 +28,9 @@
 .nav-menu {
   display: flex;
 }
-
 .nav-menu li {
   padding: 0 1rem;
 }
-
 .nav-menu a {
   font-size: x-large;
   font-weight: 500;
@@ -47,6 +45,9 @@
     width: 100%;
     height: inherit;
     margin-top: 50px;
+  }
+  .hide-icons {
+    display: none;
   }
   .hamburger {
     display: flex;
