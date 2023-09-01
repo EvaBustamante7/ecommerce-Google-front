@@ -27,6 +27,11 @@ const Form = () => {
                 "password":datos.pass
                
             });
+            // var raw = JSON.stringify({
+            //     "username": "pepito23@hotmail.com",
+            //     "password": "000000"
+            //   });
+              
 
            
 

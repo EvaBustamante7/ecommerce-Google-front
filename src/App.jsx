@@ -4,6 +4,9 @@ import Home from './routes/Home';
 import Contact from './routes/Contact';
 import Inmersiva from './routes/Inmersiva';
 import Login from './routes/Login';
+import Products from './routes/Products';
+
+
 import Register from './components/register/Register'
 import Obj3d from './routes/Obj3d'
 
@@ -15,6 +18,7 @@ function App() {
         <Route path='/contact' element={<Contact/>} />
         <Route path='/inmersiva' element={<Inmersiva/>} />
         <Route path='/login' element={<Login/>} />
+        <Route path='/products' element={<Products/>} />
         <Route path='/register' element={<Register/>} />
         <Route path='/objeto' element={<Obj3d/>} />
 
