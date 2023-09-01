@@ -1,8 +1,10 @@
 @import '../../../index-css/_colors.scss';
 .contenedor {
-  width: 195%;
-  max-width: 1120px;
-  margin: 100px 180px 50px;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  //margin: 100px 180px 50px;
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(2, 1fr);
