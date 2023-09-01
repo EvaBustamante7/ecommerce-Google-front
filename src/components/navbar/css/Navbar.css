@@ -1,6 +1,8 @@
 /*Paleta oscura*/
 /*Paleta clara*/
 .header {
+  position: fixed;
+  top: 0;
   width: 100%;
   height: 90px;
   display: flex;
@@ -51,7 +53,10 @@
     margin-left: -5px;
   }
   .nav-menu {
-    position: fixed; /* Cambiado a "fixed" para permitir el scroll */
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     top: 0;
     left: -100%;
     text-align: center;
@@ -59,8 +64,7 @@
     height: 100vh;
     transition: 0.3s;
     z-index: -1;
-    background: rgba(0, 0, 0, 0.9);
-    overflow-y: auto; /* Agregado para permitir el scroll */
+    background: rgba(0, 0, 0, 0.9); /* Agregado para permitir el scroll */
   }
   .nav-menu.active {
     left: 0;

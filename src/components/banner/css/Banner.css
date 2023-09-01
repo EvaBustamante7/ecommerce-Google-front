@@ -3,7 +3,7 @@
 .contenedor {
   width: 195%;
   max-width: 1120px;
-  margin: 50px 180px;
+  margin: 100px 180px 50px;
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(2, 1fr);
@@ -33,6 +33,7 @@
 
 .widget-1 {
   grid-area: widget-1;
+  padding: 50px;
 }
 
 .widget-2 {
@@ -47,6 +48,7 @@
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-top: 15px;
 }
 
 .widget-1 button:hover {
