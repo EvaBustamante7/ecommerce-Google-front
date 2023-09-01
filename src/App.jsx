@@ -4,7 +4,7 @@ import Home from './routes/Home';
 import Contact from './routes/Contact';
 import Inmersiva from './routes/Inmersiva';
 import Login from './routes/Login';
-import Products from './components/Products/Products';
+import Products from './routes/Products';
 
 
 import Register from './components/register/Register'
