@@ -3,12 +3,23 @@
 .carousel-container {
   width: 100%;
   max-width: 1200px;
-  margin:  auto;
+  margin: auto;
   padding: 20px;
+
+  .slick-prev:before,
+  .slick-next:before {
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;
+    color: $black;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 }
 
 .carousel-item {
-  display:table-column;
+  display: table-column;
   align-items: center;
   justify-content: center;
   height: 350px;
@@ -21,14 +32,26 @@
     border-radius: 5px;
   }
 }
+
 @media screen and (max-width: 768px) {
- 
+
   .carousel-container,
   .carousel-item,
   img {
     margin-left: 40px;
+    max-width: 90%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
   }
-} 
-
-
-  
+  .slick-prev:before,
+  .slick-next:before {
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;
+    color: $black;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
