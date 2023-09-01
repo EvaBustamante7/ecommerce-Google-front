@@ -25,15 +25,13 @@ const Navbar = () => {
             <Link to='/'><img id='logo' src={Logo} alt="Logo G3da" /></Link>
             <div className='nav-wrapper'>
                 <div className='hamburger' onClick={handleClick}>
-                    {click ? (<FaTimes size={25} style={{ color: 'black', margin: '0 10px'}} />) : <FaBars size={25} style={{ color: 'black', margin: '0 10px' }} />}
+                    {click ? (<FaTimes size={25} style={{ color: 'black', margin: '0 10px' }} />) : <FaBars size={25} style={{ color: 'black', margin: '0 10px' }} />}
                     <Link to='/login'>
                         <BiSolidLogInCircle size={25} style={{ color: 'black', margin: '0 10px' }} />
                     </Link>
                     <Link to='/shop'>
-                        <FaShoppingCart size={25} style={{ color: 'black', margin: '0 10px' }}  />
+                        <FaShoppingCart size={25} style={{ color: 'black', margin: '0 10px' }} />
                     </Link>
-
-
                 </div>
             </div>
             <ul className={click ? 'nav-menu active' : 'nav-menu'}>
@@ -49,6 +47,13 @@ const Navbar = () => {
                 <li>
                     <Link to='/contact'>Contact</Link>
                 </li>
+                <li><Link className='hide-icons' to='/login'>
+                    <BiSolidLogInCircle size={25} style={{ color: 'black' }} />
+                </Link></li>
+                <li><Link className='hide-icons' to='/shop'>
+                    <FaShoppingCart size={25} style={{ color: 'black' }} />
+                </Link></li>
+
             </ul>
         </div>
     );
