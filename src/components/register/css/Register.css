@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*Paleta oscura*/
 /*Paleta clara*/
-.login {
+.register {
   width: 300px;
   margin-top: 150px;
   margin-bottom: 10px;
@@ -50,8 +50,8 @@
 
 /* Estilos para el formulario en dispositivos móviles (opcional) */
 @media screen and (max-width: 768px) {
-  .login {
+  .register {
     width: 300px;
     margin-top: 110px;
   }
-}/*# sourceMappingURL=LoginForm.css.map */
+}/*# sourceMappingURL=Register.css.map */
