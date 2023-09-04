@@ -18,6 +18,7 @@ const ProductList = () => {
           <h3>{product.name}</h3>
           <p>Precio: {product.price}</p>
           <img src={product.image} alt={product.name} />
+          <img src={product.qr} alt={product.name} />
         </div>
       ))}
     </div>
