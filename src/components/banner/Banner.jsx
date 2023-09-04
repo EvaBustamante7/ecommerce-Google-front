@@ -11,6 +11,10 @@ const Banner = (props) => {
       </div>
       <div className="widget-2">
         <img src={props.image} alt="Imagen" />
+        {/* <video controls>
+          <source src={props.video} type="video/mp4" />
+          Tu navegador no soporta la reproducción de video.
+        </video> */}
       </div>
     </div>
   );

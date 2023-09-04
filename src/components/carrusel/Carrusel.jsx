@@ -7,9 +7,8 @@ import imagen1 from '../assets/imagen1.jpg';
 import imagen2 from '../assets/imagen2.jpg';
 import imagen3 from '../assets/imagen3.jpg';
 import imagen4 from '../assets/imagen4.jpg';
-import imagen5 from '../assets/escultura1.jpg';
-import imagen6 from '../assets/escultura3.jpeg';
-
+import imagen5 from '../assets/imagen5.jpg';
+import imagen6 from '../assets/imagen7.jpg';
 
 const Carousel = () => {
   const settings = {
