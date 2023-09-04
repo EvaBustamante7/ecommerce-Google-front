@@ -3,6 +3,7 @@
   width: 100%;
   max-width: 1200px;
   margin: auto;
+  margin-top: 100px;
   padding: 20px;
   //margin: 100px 180px 50px;
   display: grid;
@@ -13,8 +14,8 @@
     "widget-1 widget-2";
 }
 
-.widget-1,
-.widget-2 {
+.widget-2{
+  grid-area: widget-2;
   background: $blue_2;
   height: 399px;
   text-align: center;
@@ -24,35 +25,39 @@
   justify-content: center;
   border-radius: 10px;
   overflow: hidden;
-}
-
-.widget-1 img,
-.widget-2 img {
-  max-width: 150%;
-  max-height: 99%;
+ img {
+      width: 100%;
+    height: 100%;
   object-fit: cover;
 }
-
+}
 .widget-1 {
   grid-area: widget-1;
   padding: 50px;
-}
+  background: $blue_2;
+  height: 399px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  overflow: hidden;
 
-.widget-2 {
-  grid-area: widget-2;
-}
-.widget-1 button {
-  background-color: #55a8fd;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: 15px;
-}
-.widget-1 button:hover {
-  background-color: #4287e0;
+  button {
+    background-color: #55a8fd;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+  
+    .widget-1 button:hover {
+      background-color: #4287e0;
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -60,27 +65,41 @@
     grid-template-areas:
       "widget-2"
       "widget-1";
-      margin-inline: 50px;
+      grid-template-columns: repeat(1, 1fr);
+      margin-inline: 5px;
+      margin-top: 100px;
   }
   .widget-2 {   
-    margin-left: 4px;
+    grid-area: widget-2;
+    background: $blue_2;
+    height: 265px;
+    text-align: center;
+    
+   img {
+    //width: auto;
+    height:100% ;
+    object-fit: cover;
+    
   }
+}
   .widget-1 {
-    padding: 5px;
-    margin-left: 4px;
-  }
-
-  .widget-1 h2 {
+    grid-area: widget-1;
+    background: $blue_2;
+    height: 265px;
+    text-align: center;
+    
+   h2 {
     font-size: 1.3rem;
     margin-bottom: 8px;
   }
 
-  .widget-1 p {
+   p {
     font-size: 1rem;
     margin-bottom: 15px;
   }
 
-  .widget-1 button {
+   button {
     padding: 8px 16px;
+  }
   }
 } 
