@@ -14,7 +14,7 @@ const Home = () => {
     <Navbar/>
     <Banner
      title="Google 3D Aesthetic "
-     text="Te invita a explorar su ecommerce. Donde encontrarás NFTs únicos diseñados por talentosos artistas 3D, que van desde cautivadoras esculturas digitales hasta innovadoras obras de arte. Sumérgete en la experiencia, al mundo tangible recomendado por el artista. Su selección se extiende más allá de los NFTs, ofreciendo una variada gama de pinturas y esculturas que desarrollan la creatividad en todas sus formas."
+     text="Te invita a explorar su ecommerce. Donde encontrarás NFTs únicos diseñados por talentosos artistas 3D, que van desde cautivadoras esculturas digitales hasta innovadoras obras de arte.  ofreciendo una variada gama de pinturas y esculturas que desarrollan la creatividad en todas sus formas."
      image={imagen}
      showButton={false} buttonText="Leer más" />
     <Carrusel/>

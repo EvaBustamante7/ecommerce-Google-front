@@ -9,6 +9,7 @@ import Products from './routes/Products';
 
 import Register from './components/register/Register'
 import Obj3d from './routes/Obj3d'
+import About from './components/about/About';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path='/products' element={<Products/>} />
         <Route path='/register' element={<Register/>} />
         <Route path='/objeto' element={<Obj3d/>} />
+        <Route path='/about' element={<About/>} />
 
       </Routes>
     </div>
