@@ -1,17 +1,19 @@
 /*Paleta oscura*/
 /*Paleta clara*/
 .contenedor {
-  width: 195%;
-  max-width: 1120px;
-  margin: 50px 180px;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 100px;
+  padding: 20px;
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas: "widget-1 widget-2";
 }
 
-.widget-1,
 .widget-2 {
+  grid-area: widget-2;
   background: #EFEAE5;
   height: 399px;
   text-align: center;
@@ -22,48 +24,63 @@
   border-radius: 10px;
   overflow: hidden;
 }
-
-.widget-1 img,
 .widget-2 img {
-  max-width: 150%;
-  max-height: 99%;
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .widget-1 {
   grid-area: widget-1;
+  padding: 50px;
+  background: #EFEAE5;
+  height: 399px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  overflow: hidden;
 }
-
-.widget-2 {
-  grid-area: widget-2;
-}
-
 .widget-1 button {
-  background-color: #55a8fd;
-  color: #fff;
+  background-color: #4186C7;
+  color: #ffffff;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-top: 15px;
 }
-
-.widget-1 button:hover {
-  background-color: #4287e0;
+.widget-1 button .widget-1 button:hover {
+  background-color: #7CB2E0;
 }
 
 @media screen and (max-width: 768px) {
   .contenedor {
     grid-template-areas: "widget-2" "widget-1";
-    margin-inline: 50px;
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 100px;
   }
   .widget-2 {
-    margin-left: 4px;
+    grid-area: widget-2;
+    background: #EFEAE5;
+    height: 265px;
+    text-align: center;
+  }
+  .widget-2 img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .widget-1 {
-    padding: 5px;
-    margin-left: 4px;
+    grid-area: widget-1;
+    background: #EFEAE5;
+    height: 265px;
+    text-align: center;
   }
   .widget-1 h2 {
     font-size: 1.3rem;

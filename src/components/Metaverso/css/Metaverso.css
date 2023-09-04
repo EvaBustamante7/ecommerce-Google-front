@@ -1,0 +1,112 @@
+/*Paleta oscura*/
+/*Paleta clara*/
+.contenedor {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 100px;
+  padding: 20px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "widget-1 widget-2";
+}
+
+.widget-2 {
+  grid-area: widget-2;
+  background: #EFEAE5;
+  height: 399px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.widget-2 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.widget-1 {
+  grid-area: widget-1;
+  padding: 50px;
+  background: #EFEAE5;
+  height: 399px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.widget-1 .button-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4186C7;
+  color: #ffffff;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+.widget-1 .button-link:hover {
+  background-color: #7CB2E0;
+}
+
+@media screen and (max-width: 768px) {
+  .contenedor {
+    grid-template-areas: "widget-2" "widget-1";
+    grid-template-columns: repeat(1, 1fr);
+    margin-inline: 5px;
+    margin-top: 100px;
+  }
+  .widget-2 {
+    grid-area: widget-2;
+    background: #EFEAE5;
+    height: 265px;
+    text-align: center;
+  }
+  .widget-2 img {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .widget-1 {
+    grid-area: widget-1;
+    background: #EFEAE5;
+    height: 265px;
+    text-align: center;
+  }
+  .widget-1 h2 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+  }
+  .widget-1 p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  .widget-1 button {
+    padding: 8px 16px;
+  }
+  .widget-1 .button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4186C7;
+    color: #ffffff;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .widget-1 .button-link:hover {
+    background-color: #7CB2E0;
+  }
+}/*# sourceMappingURL=Metaverso.css.map */

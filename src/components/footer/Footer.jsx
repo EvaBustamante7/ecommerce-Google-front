@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import Logo from '../logo/G3DA.svg';
@@ -22,7 +23,7 @@ const Footer = () => {
 
         <div className="footer-content">
           <h3>About Us</h3>
-          <a href="/about">About</a>
+          <Link to='/about'>About</Link>
           <a href="/jobs">Jobs</a>
           <a href="/press">Press</a>
           <a href="/contact">Contact</a>
