@@ -7,12 +7,12 @@ const Banner = (props) => {
       <div className="widget-1">
         <h2>{props.title}</h2>
         <p>{props.text}</p>
-        <button>Leer más</button>
+        {props.showButton && <button>{props.buttonText}</button>}
       </div>
       <div className="widget-2">
         <img src={props.image} alt="Imagen" />
       </div>
-    </div>   
+    </div>
   );
 };
 export default Banner;
