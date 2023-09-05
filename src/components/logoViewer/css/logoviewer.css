@@ -68,7 +68,7 @@
   background-color: #4287e0;
 }
 
-#model_viewer {
+#logo_viewer {
   width: 600px;
   height: 600px;
   border-radius: 10px;
@@ -99,4 +99,4 @@
   .widget-1 button {
     padding: 8px 16px;
   }
-}/*# sourceMappingURL=modelviewer.css.map */
+}/*# sourceMappingURL=logoviewer.css.map */
