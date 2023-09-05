@@ -1,9 +1,13 @@
 import React from 'react'
+import ModelViewer from '../components/modelviewer/model_viewer'
 
-const Obj3d = () => {
+
+const Card = () => {
   return (
-    <div>Obj3d</div>
-  )
+   <div>
+   <ModelViewer/>
+   </div>
+      )
 }
 
-export default Obj3d
+export default Card

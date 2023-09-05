@@ -4,9 +4,12 @@ import Footer from '../components/footer/Footer'
 import Navbar from '../components/navbar/Navbar'
 import Carrusel from '../components/carrusel/Carrusel'
 import  imagen from '../components/assets/ARCO.webp'
-import  imagen1 from '../components/assets/imagenes1.jpg'
+import  imagen1 from '../components/assets/imagenes1.jpg
+import  imagen2 from '../components/assets/LlFD.gif'
+import ModelViewer from '../components/modelviewer/model_viewer'
 import Metaverso from '../components/Metaverso/Metaverso'
 import Metaverso1 from '../components/assets/Metaverso.mp4'
+
 
 const Home = () => {
   return (
@@ -29,7 +32,8 @@ const Home = () => {
      title="Experiencia inmersiva"
      text="Nuestro museo virtual es un espacio donde la innovación y el arte convergen para ofrecerte una experiencia única. Podrás explorar las diferentes obras de arte, interactuar con ellas y descubrir nuevas perspectivas artísticas. ¡Bienvenido a este emocionante viaje artístico en nuestro museo virtual! Puedes experimentar una experiencia inmersiva única que combina arte, innovación y tecnología."
      image={imagen1}
-     showButton={true} buttonText="Leer más" />
+    showButton={true} buttonText="Leer más" />
+    <ModelViewer/>
     <Footer/>
     </>
   )
