@@ -1,4 +1,63 @@
 # Google Aesthetics Front
+Google 3D Aesthetic te invita a su espacio en el metaverso, donde podrás interactuar con artistas y coleccionistas como tú. Nuestra experiencia virtual incluye características como un carrusel, visor de logotipos, visor de modelos 3D y más. Explora nuestro museo virtual, donde la innovación y el arte convergen para ofrecerte una experiencia única, todo gracias a Three.js. ¡Únete a nosotros en el metaverso y descubre un nuevo espacio digital!
+
+## Equipo
+
+Este proyecto fue creado por un equipo de 5 programadores de frontend y backend:
+
+* [Juan Antonio Garcia]
+* [Soledad Piquer]
+* [Eva Bustamante Rodríguez]
+* [Zoraida Manzanares]
+* [Liliana Garcia Severiche]
+
+## Características Destacadas
+- Museo Virtual: Explora una colección diversa de obras de arte y esculturas en 3D.
+- Reuniones en el Metaverso: Conéctate con otros amantes del arte en un espacio virtual compartido.
+- Visor de Logotipos: Examina logotipos y diseños de manera detallada.
+- Visor de Modelos 3D: Interactúa con modelos 3D impresionantes y creativos.
+- Diseño Responsivo: La página se adapta a diferentes dispositivos y tamaños de pantalla.
+
+ ## Capturas de Pantalla
+ <img src="https://github.com/EvaBustamante7/ecommerce-Google-front/assets/126781409/3d39501b-3300-4afe-826b-7d3b3e681db9"> 
+ <img src="https://github.com/EvaBustamante7/ecommerce-Google-front/assets/126781409/d387fd5f-459c-4ac1-a926-e637374aaaca">
+
+ 
+
+## Tecnologías Utilizadas
+- Three.js: Biblioteca JavaScript para la creación de gráficos 3D.
+- React: Biblioteca para construir interfaces de usuario.
+- Node.js: Entorno de tiempo de ejecución de JavaScript.
+
+## Licencia
+Este proyecto está bajo la licencia [MIT License].
+
+## Contacto
+Si tienes preguntas o sugerencias, no dudes en contactarnos:
+### Linkedin
+* https://www.linkedin.com/in/eva-bustamante/
+* https://www.linkedin.com/in/juan-agg
+* https://www.linkedin.com/in/solpiquer/
+* https://www.linkedin.com/in/zoraida-manzanares-004181274/
+* https://www.linkedin.com/in/liligarciaseveriche/
+ ### ¡Gracias por ser parte de la comunidad de Google 3D Aesthetic!
+
+## Colaboradores
+Agradecemos a los siguientes colaboradores por su valiosa contribución a este proyecto:
+
+* [Ana Aragon] (@anaaragon88) Github: https://github.com/anaaragon88
+* [Alexandra Zambrano] (@AlexandraZambrano) Github: https://github.com/AlexandraZambrano
+* [Jorge Benítez López] (@signados) Github: https://github.com/signados
+
+## Links
+Proyecto de Google3Da:
+* https://www.figma.com/file/nTKc0OKTvjFIqGYkit6Mgv/Google?type=design&node-id=0%3A1&mode=design&t=g2VnV3slLUgIq9cP-1
+presentacion Enlace para ver:
+* https://www.canva.com/design/DAFsinU9KFU/xoFsNqZcf01FE9T3DDw24w/edit?utm_content=DAFsinU9KFU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+trello
+* https://trello.com/b/OaUsMmuZ/daily-google
+  
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
