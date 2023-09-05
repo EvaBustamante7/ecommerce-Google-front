@@ -47,7 +47,7 @@ const Navbar = () => {
                 <li>
                     <Link to='/contact'>Contact</Link>
                 </li>
-                <li><Link className='hide-icons' to='/login'>
+                <li><Link className='hide-icons' to='/log'>
                     <VscAccount size={25} style={{ color: 'black' }} />
                 </Link></li>
                 <li><Link className='hide-icons' to='/shop'>
