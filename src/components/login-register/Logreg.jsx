@@ -9,7 +9,6 @@ const Logreg = () => {
     <>
     <Navbar/>
     <Log/>
-    
     <Footer />
     </>
   )
