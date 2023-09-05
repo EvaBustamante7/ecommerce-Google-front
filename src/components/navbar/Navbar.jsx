@@ -26,7 +26,7 @@ const Navbar = () => {
             <div className='nav-wrapper'>
                 <div className='hamburger' onClick={handleClick}>
                     {click ? (<FaTimes size={25} style={{ color: 'black', margin: '0 10px' }} />) : <FaBars size={25} style={{ color: 'black', margin: '0 10px' }} />}
-                    <Link to='/login'>
+                    <Link to='/log'>
                         <VscAccount size={25} style={{ color: 'black', margin: '0 10px' }} />
                     </Link>
                     <Link to='/shop'>
