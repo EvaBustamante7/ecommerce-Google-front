@@ -63,7 +63,6 @@
     grid-template-areas: "widget-2" "widget-1";
     grid-template-columns: repeat(1, 1fr);
     margin-top: 100px;
-
   }
   .widget-2 {
     grid-area: widget-2;

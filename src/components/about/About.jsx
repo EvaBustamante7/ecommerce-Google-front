@@ -10,7 +10,7 @@ const About = () => {
         <>
             <Navbar />
             <Banner title="Google 3D Aesthetic "
-                text="Nuestro equipo de trabajo es un equipo pluridisciplinar , formado por cinco componentes amantes del arte . Nuestro equipo , se encargara de ofrecer una  una amplia variedad de NFTs únicos diseñados por talentosos artistas 3D, así como otras formas de arte como pinturas, esculturas. Nos aseguraremos de  brindar una experiencia excepcional a los clientes, permitiéndoles sumergirse en la colección de piezas digitales exclusivas o imprimir sus favoritas con materiales recomendados por los artistas. Si quieres conocer más sobre nosotros o tienes dudas, no dejes de contactar ."
+                text="Nuestro equipo de trabajo es un equipo pluridisciplinar , formado por cinco componentes amantes del arte. Encargándonos  de ofrecerte una  una amplia variedad de NFTs únicos. Nuestro misión será que disfrutes de la mejor experiencia."
                 image={imagen}
             />
             <GoogleMaps/>
