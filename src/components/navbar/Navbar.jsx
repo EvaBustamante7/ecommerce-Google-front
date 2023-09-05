@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars, FaTimes, FaShoppingCart } from 'react-icons/fa';
-import { BiSolidLogInCircle } from 'react-icons/bi';
+import { VscAccount } from 'react-icons/vsc';
 import Logo from '../logo/G3DA.svg';
 import './css/Navbar.css';
 
@@ -27,7 +27,7 @@ const Navbar = () => {
                 <div className='hamburger' onClick={handleClick}>
                     {click ? (<FaTimes size={25} style={{ color: 'black', margin: '0 10px' }} />) : <FaBars size={25} style={{ color: 'black', margin: '0 10px' }} />}
                     <Link to='/login'>
-                        <BiSolidLogInCircle size={25} style={{ color: 'black', margin: '0 10px' }} />
+                        <VscAccount size={25} style={{ color: 'black', margin: '0 10px' }} />
                     </Link>
                     <Link to='/shop'>
                         <FaShoppingCart size={25} style={{ color: 'black', margin: '0 10px' }} />
@@ -48,7 +48,7 @@ const Navbar = () => {
                     <Link to='/contact'>Contact</Link>
                 </li>
                 <li><Link className='hide-icons' to='/login'>
-                    <BiSolidLogInCircle size={25} style={{ color: 'black' }} />
+                    <VscAccount size={25} style={{ color: 'black' }} />
                 </Link></li>
                 <li><Link className='hide-icons' to='/shop'>
                     <FaShoppingCart size={25} style={{ color: 'black' }} />

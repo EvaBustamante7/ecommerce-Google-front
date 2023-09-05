@@ -36,7 +36,6 @@
   .carousel-container,
   .carousel-item,
   img {
-    margin-left: 50px;
     max-width: 80%;
     max-height: 100%;
     -o-object-fit: cover;
