@@ -39,13 +39,16 @@ const Navbar = () => {
                     <Link to='/'>Home</Link>
                 </li>
                 <li>
-                    <Link to='/inmersiva'>3D Experience</Link>
+                    <Link to='https://framevr.io/hhj-ist-euq'>Metaverso</Link>
                 </li>
                 <li>
-                    <Link to='/products'>Products</Link>
+                    <Link to='/inmersiva'>Galería 3D</Link>
                 </li>
                 <li>
-                    <Link to='/contact'>Contact</Link>
+                    <Link to='/products'>Productos</Link>
+                </li>
+                <li>
+                    <Link to='/contact'>Contacto</Link>
                 </li>
                 <li><Link className='hide-icons' to='/log'>
                     <VscAccount size={25} style={{ color: 'black' }} />
