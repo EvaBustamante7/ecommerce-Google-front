@@ -13,7 +13,6 @@
     background-color: #fff;
 }
 
-/* Estilos para los campos de entrada */
 .form-group {
     padding: 10px;
 }
@@ -27,27 +26,21 @@
     font-size: 16px;
 }
 
-/* Estilos para el botón de envío */
 .btn-primary {
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
-    /* Color de fondo del botón */
+    background-color: $blue;
     color: #fff;
-    /* Color del texto del botón */
     border: none;
     border-radius: 3px;
     font-size: 18px;
     cursor: pointer;
 }
 
-/* Estilos para el botón de envío cuando se pasa el cursor sobre él */
 .btn-primary:hover {
     background-color: #0056b3;
-    /* Cambiar el color de fondo en el hover */
 }
 
-/* Estilos para el formulario en dispositivos móviles (opcional) */
 @media screen and (max-width: 768px) {
     .register {
         width: 300px;

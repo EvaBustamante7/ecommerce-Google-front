@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from 'react';
 import { urlLogin } from '../../Servicies/urls';
+import { Link } from 'react-router-dom';
 import './css/LoginForm.css'
 
 
@@ -71,13 +72,17 @@ const Form = () => {
             <div className='login'>
                 <form className="row" onSubmit={enviarDatos}>
                     <div className="form-group p-3">
-                        <input type="text" placeholder="User" className="form-control" onChange={handleInputChange} name="user"></input>
+                        <input type="email" placeholder="User" className="form-control" onChange={handleInputChange} name="user"></input>
                     </div>
                     <div className="form-group p-3">
-                        <input type="text" placeholder="Password" className="form-control" onChange={handleInputChange} name="pass"></input>
+                        <input type="password" placeholder="Password" className="form-control" onChange={handleInputChange} name="pass"></input>
                     </div>
                     <div className="form-group p-3">
                         <button type="submit" className="btn btn-primary">Enviar</button>
+                    </div>
+                    <div className="login-links">
+                        <p>Don't have an account?</p>
+                        <Link to="/register">Signup</Link>
                     </div>
                 </form>
             </div>
