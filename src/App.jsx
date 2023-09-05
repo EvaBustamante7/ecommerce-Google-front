@@ -10,6 +10,7 @@ import Products from './routes/Products';
 import Register from './components/register/Register'
 import Obj3d from './routes/Obj3d'
 import About from './components/about/About';
+import Logreg from './components/login-register/Logreg';
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
         <Route path='/register' element={<Register/>} />
         <Route path='/objeto' element={<Obj3d/>} />
         <Route path='/about' element={<About/>} />
+        <Route path='/prueba' element={<Logreg/>} />
+
 
       </Routes>
     </div>
