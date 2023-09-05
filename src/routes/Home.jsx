@@ -6,6 +6,7 @@ import Carrusel from '../components/carrusel/Carrusel'
 import  imagen from '../components/assets/ARCO.webp'
 import  galeria from '../components/assets/galeria.png'
 import ModelViewer from '../components/modelviewer/model_viewer'
+import LogoViewer from '../components/logoViewer/logoViewer'
 import Metaverso from '../components/Metaverso/Metaverso'
 import Metaverso1 from '../components/assets/Metaverso.mp4'
 
@@ -14,6 +15,7 @@ const Home = () => {
   return (
     <>
     <Navbar/>
+    <LogoViewer/>
     <Banner
      title="Google 3D Aesthetic "
      text="Te invita a explorar su ecommerce. Donde encontrarás NFTs únicos diseñados por talentosos artistas 3D, que van desde cautivadoras esculturas digitales hasta innovadoras obras de arte.  ofreciendo una variada gama de pinturas y esculturas que desarrollan la creatividad en todas sus formas."

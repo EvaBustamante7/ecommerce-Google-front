@@ -11,8 +11,20 @@
     "widget-1 widget-2";
 }
 
-.widget-1,
+
 .widget-2 {
+  background: $blue_2;
+  height: 399px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  overflow: hidden;
+  object-fit: cover;
+}
+.widget-1{
   background: $blue_2;
   height: 399px;
   text-align: center;
