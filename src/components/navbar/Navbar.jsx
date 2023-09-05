@@ -1,27 +1,39 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { FaBars, FaTimes } from 'react-icons/fa'
-import Logo from '../logo/G3DA.svg'
-import './css/Navbar.css'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { FaBars, FaTimes, FaShoppingCart } from 'react-icons/fa';
+import { VscAccount } from 'react-icons/vsc';
+import Logo from '../logo/G3DA.svg';
+import './css/Navbar.css';
 
 const Navbar = () => {
-    const [click, setClick] = useState(false)
-    const handleClick = () => setClick(!click)
+    const [click, setClick] = useState(false);
+    const handleClick = () => setClick(!click);
 
-    const [color, setColor] = useState(false)
+    const [color, setColor] = useState(false);
     const changeColor = () => {
         if (window.scrollY >= 100) {
-            setColor(true)
+            setColor(true);
         } else {
-            setColor(false)
+            setColor(false);
         }
-    }
+    };
 
-    window.addEventListener('scroll', changeColor)
+    window.addEventListener('scroll', changeColor);
 
     return (
         <div className={color ? 'header header-bg' : 'header'}>
             <Link to='/'><img id='logo' src={Logo} alt="Logo G3da" /></Link>
+            <div className='nav-wrapper'>
+                <div className='hamburger' onClick={handleClick}>
+                    {click ? (<FaTimes size={25} style={{ color: 'black', margin: '0 10px' }} />) : <FaBars size={25} style={{ color: 'black', margin: '0 10px' }} />}
+                    <Link to='/login'>
+                        <VscAccount size={25} style={{ color: 'black', margin: '0 10px' }} />
+                    </Link>
+                    <Link to='/shop'>
+                        <FaShoppingCart size={25} style={{ color: 'black', margin: '0 10px' }} />
+                    </Link>
+                </div>
+            </div>
             <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                 <li>
                     <Link to='/'>Home</Link>
@@ -30,22 +42,21 @@ const Navbar = () => {
                     <Link to='/inmersiva'>3D Experience</Link>
                 </li>
                 <li>
-                    <Link to='/'>Products</Link>
+                    <Link to='/products'>Products</Link>
                 </li>
                 <li>
                     <Link to='/contact'>Contact</Link>
                 </li>
-                <li>
-                    <Link to='/'>Shop</Link>
-                </li>
+                <li><Link className='hide-icons' to='/login'>
+                    <VscAccount size={25} style={{ color: 'black' }} />
+                </Link></li>
+                <li><Link className='hide-icons' to='/shop'>
+                    <FaShoppingCart size={25} style={{ color: 'black' }} />
+                </Link></li>
 
             </ul>
-            <div className='hamburger' onClick={handleClick}>
-                {click ? (<FaTimes size={20} style={{ color: 'white' }} />) : <FaBars size={20} style={{ color: 'black' }} />}
-
-            </div>
         </div>
-    )
-}
+    );
+};
 
-export default Navbar
+export default Navbar;

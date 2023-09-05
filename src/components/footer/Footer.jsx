@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import Logo from '../logo/G3DA.svg';
@@ -20,22 +21,22 @@ const Footer = () => {
         </div>
 
 
-        <div class="footer-content">
+        <div className="footer-content">
           <h3>About Us</h3>
-          <a href="/about">About</a>
+          <Link to='/about'>About</Link>
           <a href="/jobs">Jobs</a>
           <a href="/press">Press</a>
           <a href="/contact">Contact</a>
         </div>
 
-        <div class="footer-content">
+        <div className="footer-content">
           <h3>Resources</h3>
           <a href="/Open Source">Open Source</a>
           <a href="/blog">Blog</a>
           <a href="/The Art Genome Project">The Art Genome Project</a>
         </div>
 
-        <div class="footer-content">
+        <div className="footer-content">
           <h3>Partnerships</h3>
           <a href="/#">Artsy for Galleries</a>
           <a href="/#">Artsy for Museums</a>
@@ -43,7 +44,7 @@ const Footer = () => {
           <a href="/#">Artsy for Fairs</a>
         </div>
 
-        <div class="footer-content">
+        <div className="footer-content">
           <h3>Support</h3>
           <a href="/#">Talk to a Specialist</a>
           <a href="/#">Visit our Help Center</a>
@@ -51,7 +52,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div class="bottom-bar">
+      <div className="bottom-bar">
         <p>&copy; 2023 your company. All rights reserved. <a href="/Platform terms">Platform terms.</a><a href="/ Privacy policy">Privacy policy.</a><a href="/ Cookie Policy"> Cookie Policy</a></p>
       </div>
     </footer>
