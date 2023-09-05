@@ -21,7 +21,7 @@ const Log = () => {
       ...datos,
       [event.target.name]: event.target.value
     });
-    
+
     if (event.target.name === 'user') {
       setErrors({
         ...errors,
