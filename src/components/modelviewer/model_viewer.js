@@ -7,9 +7,8 @@ function ModelViewer() {
     <div>
       <div className="contenedor">
         <div className="widget-1">
-          <h2>damelo ya</h2>
-          <p></p>
-          <button>Leer más</button>
+          <h2>Experiencia inmersiva</h2>
+          <p>Google nos da la oportunidad gracias a la tecnología Model Viewer de poder disfrutar de una experiencia inmersiva en tu casa, únicamente necesitaras un móvil para vivir esta experiencia.</p>
         </div>
         <div className="widget-2">
           <iframe
