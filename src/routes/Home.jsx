@@ -4,7 +4,7 @@ import Footer from '../components/footer/Footer'
 import Navbar from '../components/navbar/Navbar'
 import Carrusel from '../components/carrusel/Carrusel'
 import  imagen from '../components/assets/ARCO.webp'
-import  imagen1 from '../components/assets/imagenes1.jpg
+import  imagen1 from '../components/assets/imagenes1.jpg'
 import  imagen2 from '../components/assets/LlFD.gif'
 import ModelViewer from '../components/modelviewer/model_viewer'
 import Metaverso from '../components/Metaverso/Metaverso'
