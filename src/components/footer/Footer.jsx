@@ -22,38 +22,38 @@ const Footer = () => {
 
 
         <div className="footer-content">
-          <h3>About Us</h3>
-          <Link to='/about'>About</Link>
-          <a href="/jobs">Jobs</a>
-          <a href="/press">Press</a>
-          <a href="/contact">Contact</a>
+          <h3>Nosotros</h3>
+          <Link to='/about'>Nosotros</Link>
+          <a href="/jobs">Trabajos</a>
+          <a href="/press">Noticias</a>
+          <a href="/contact">Contacto</a>
         </div>
 
         <div className="footer-content">
-          <h3>Resources</h3>
+          <h3>Recursos</h3>
           <a href="/Open Source">Open Source</a>
           <a href="/blog">Blog</a>
-          <a href="/The Art Genome Project">The Art Genome Project</a>
+          <a href="/The Art Genome Project">"The Art Genome Project"</a>
         </div>
 
         <div className="footer-content">
-          <h3>Partnerships</h3>
-          <a href="/#">Artsy for Galleries</a>
-          <a href="/#">Artsy for Museums</a>
-          <a href="/#">Artsy for Auctions</a>
-          <a href="/#">Artsy for Fairs</a>
+          <h3>Colaboraciones</h3>
+          <a href="/#">Arte para Galerías</a>
+          <a href="/#">Arte para Museos</a>
+          <a href="/#">Arte para Subastas</a>
+          <a href="/#">Arte para Ferias</a>
         </div>
 
         <div className="footer-content">
-          <h3>Support</h3>
-          <a href="/#">Talk to a Specialist</a>
-          <a href="/#">Visit our Help Center</a>
-          <a href="/#">Buying on Artsy</a>
+          <h3>Soporte Técnico</h3>
+          <a href="/#">Habla con un especialista</a>
+          <a href="/#">Visita nuestro Help Center</a>
+          <a href="/#">Compras</a>
         </div>
       </div>
 
       <div className="bottom-bar">
-        <p>&copy; 2023 your company. All rights reserved. <a href="/Platform terms">Platform terms.</a><a href="/ Privacy policy">Privacy policy.</a><a href="/ Cookie Policy"> Cookie Policy</a></p>
+        <p>&copy; 2023 Google3da. All rights reserved. <a href="/Platform terms">Platform terms.</a><a href="/ Privacy policy">Privacy policy.</a><a href="/ Cookie Policy"> Cookie Policy</a></p>
       </div>
     </footer>
 

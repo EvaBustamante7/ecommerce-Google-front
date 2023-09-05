@@ -7,7 +7,7 @@ function ModelViewer() {
     <div>
       <div className="contenedor">
         <div className="widget-1">
-          <h2>Experiencia inmersiva</h2>
+          <h2>AR Model Viewer</h2>
           <p>Google nos da la oportunidad gracias a la tecnología Model Viewer de poder disfrutar de una experiencia inmersiva en tu casa, únicamente necesitaras un móvil para vivir esta experiencia.</p>
         </div>
         <div className="widget-2">

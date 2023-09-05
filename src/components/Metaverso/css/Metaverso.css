@@ -70,7 +70,7 @@
   .widget-2 {
     grid-area: widget-2;
     background: #EFEAE5;
-    height: 265px;
+    height: 395px;
     text-align: center;
   }
   .widget-2 img {
@@ -81,7 +81,7 @@
   .widget-1 {
     grid-area: widget-1;
     background: #EFEAE5;
-    height: 265px;
+    height: 345px;
     text-align: center;
   }
   .widget-1 h2 {
