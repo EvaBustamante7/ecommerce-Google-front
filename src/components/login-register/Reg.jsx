@@ -6,8 +6,9 @@ const Reg = () => {
     const [datos, setDatos] = useState({
         user: '',
         pass: '',
-        agreeTerms: ''
-
+        agreeTerms: '',
+        name: '',
+        last_name: ''
     })
 
     const handleInputChange = (event) => {
@@ -21,7 +22,7 @@ const Reg = () => {
 
     const enviarDatos = (event) => {
         event.preventDefault()
-        console.log('enviando datos...' + datos.user + ' ' + datos.pass)
+        console.log('enviando datos...' + datos.user + ' ' + datos.pass + ' ' + datos.name + ' ' + datos.last_name)
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
 
@@ -30,6 +31,9 @@ const Reg = () => {
         var raw = JSON.stringify({
             "email": datos.user,
             "password": datos.pass,
+            "name": datos.name,
+            "last_name": datos.last_name,
+
 
         });
         // var raw = JSON.stringify({
@@ -74,6 +78,12 @@ const Reg = () => {
                         <input type="text" placeholder="Password" className="form-control" onChange={handleInputChange} name="pass"></input>
                     </div>
                     <div className="form-group p-3">
+                        <input type="text" placeholder="Name" className="form-control" onChange={handleInputChange} name="name"></input>
+                    </div>
+                    <div className="form-group p-3">
+                        <input type="text" placeholder="Last Name" className="form-control" onChange={handleInputChange} name="last_name"></input>
+                    </div>
+                    <div className="form-group p-3">
                         <label>
                             <input type="checkbox" onChange={handleInputChange} name="agreeTerms" />
                             Acepto los términos y condiciones
@@ -84,10 +94,7 @@ const Reg = () => {
                     </div>
                 </form>
             </div>
-            {/*<ul>
-                <li>{datos.nombre}</li>
-                <li>{datos.apellido}</li>
-            </ul>*/}
+            
         </Fragment>
     );
 }
