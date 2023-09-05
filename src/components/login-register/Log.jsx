@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from 'react';
 import { urlLogin } from '../../Servicies/urls';
+import { Link } from 'react-router-dom';
 import './css/Logreg.css';
 import { FaUser, FaLock, FaChevronRight } from 'react-icons/fa';
 
@@ -10,11 +11,30 @@ const Log = () => {
     agreeTerms: true
   });
 
+  const [errors, setErrors] = useState({
+    userError: '',
+    passError: '',
+  });
+
   const handleInputChange = (event) => {
     setDatos({
       ...datos,
       [event.target.name]: event.target.value
     });
+    
+    if (event.target.name === 'user') {
+      setErrors({
+        ...errors,
+        userError: event.target.value ? '' : 'Debes ingresar un usuario.',
+      });
+    }
+
+    if (event.target.name === 'pass') {
+      setErrors({
+        ...errors,
+        passError: event.target.value ? '' : 'Debes ingresar una contraseña.',
+      });
+    }
   };
 
   const enviarDatos = (event) => {
@@ -55,27 +75,23 @@ const Log = () => {
             <form className='login'>
               <div className='login__field'>
                 <span className='login__icon'>
-                <FaUser />
+                  <FaUser />
                 </span>
                 <input
-                  type='email'
-                  placeholder='User'
-                  className='login__input'
-                  onChange={handleInputChange}
+                  type='email' placeholder='User' className='login__input'  onChange={handleInputChange}
                   name='user'
                 />
+                 {errors.userError && <p className='error'>{errors.userError}</p>}
               </div>
               <div className='login__field'>
                 <span className='login__icon'>
-                  <FaLock/>
+                  <FaLock />
                 </span>
                 <input
-                  type='password'
-                  placeholder='Password'
-                  className='login__input'
-                  onChange={handleInputChange}
+                  type='password' placeholder='Password' className='login__input' onChange={handleInputChange}
                   name='pass'
                 />
+                 {errors.userError && <p className='error'>{errors.passError}</p>}
               </div>
               <button
                 type='submit'
@@ -84,9 +100,13 @@ const Log = () => {
               >
                 Log In
                 <span className='button__icon'>
-                  <FaChevronRight/>
+                  <FaChevronRight />
                 </span>
               </button>
+              <div className="login-links">
+                <p>Don't have an account?</p>
+                <Link to="/register">Signup</Link>
+              </div>
             </form>
           </div>
           <div className='screen__background'>
