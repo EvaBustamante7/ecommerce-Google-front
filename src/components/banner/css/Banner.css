@@ -44,7 +44,7 @@
   border-radius: 10px;
   overflow: hidden;
 }
-.widget-1 button {
+.widget-1 .button-link {
   background-color: #4186C7;
   color: #ffffff;
   border: none;
@@ -54,7 +54,7 @@
   transition: background-color 0.3s ease;
   margin-top: 15px;
 }
-.widget-1 button .widget-1 button:hover {
+.widget-1 .button-link .button-link:hover {
   background-color: #7CB2E0;
 }
 

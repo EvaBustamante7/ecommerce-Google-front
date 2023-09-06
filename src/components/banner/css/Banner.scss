@@ -45,7 +45,7 @@
   border-radius: 10px;
   overflow: hidden;
 
-  button {
+  .button-link {
     background-color: $blue;
     color: $white;
     border: none;
@@ -55,8 +55,8 @@
     transition: background-color 0.3s ease;
     margin-top: 15px;
 
-    .widget-1 button:hover {
-      background-color:$blue_1;
+    .button-link:hover {
+      background-color: $blue_1; 
     }
   }
 }
