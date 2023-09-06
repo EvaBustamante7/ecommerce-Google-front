@@ -50,11 +50,11 @@ Agradecemos a los siguientes colaboradores por su valiosa contribución a este p
 * [Jorge Benítez López] (@signados) Github: https://github.com/signados
 
 ## Links
-Proyecto de Google3Da:
+- Proyecto de Google3Da:
 * https://www.figma.com/file/nTKc0OKTvjFIqGYkit6Mgv/Google?type=design&node-id=0%3A1&mode=design&t=g2VnV3slLUgIq9cP-1
-presentacion Enlace para ver:
-* https://www.canva.com/design/DAFsinU9KFU/xoFsNqZcf01FE9T3DDw24w/edit?utm_content=DAFsinU9KFU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
-trello
+- Presentacion Enlace para ver:
+* https://www.canva.com/design/DAFr48_Yhvw/RLr3raHTXSNaFIn49pL0og
+- Trello:
 * https://trello.com/b/OaUsMmuZ/daily-google
   
 
