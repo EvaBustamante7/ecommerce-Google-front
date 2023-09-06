@@ -18,16 +18,26 @@ Google 3D Aesthetic te invita a su espacio en el metaverso, donde podrás intera
 ## Equipo
 Este proyecto fue creado por un equipo de 5 programadores de frontend y backend:
 
-- [Soledad Piquer] - Scrum Master 
-- [Juan Antonio Garcia] - Product Owner
-- [Eva Bustamante Rodríguez] - Developer
-- [Zoraida Manzanares]- Developer
-- [Liliana Garcia Severiche]- Developer
+- [Soledad Piquer] - Scrum Master/Developer
+- [Juan Antonio Garcia] - Product Owner/Developer
+- [Eva Bustamante Rodríguez] - Git Hub Master/Developer
+- [Zoraida Manzanares]- Git Hub Master/Developer 
+- [Liliana Garcia Severiche]- UX/UI Designer/Developer
 
 ## Diseño
- <img src="https://github.com/EvaBustamante7/ecommerce-Google-front/assets/126781409/3d39501b-3300-4afe-826b-7d3b3e681db9" width="300px"> 
+ <img src="https://github.com/EvaBustamante7/ecommerce-Google-front/assets/126781409/3d39501b-3300-4afe-826b-7d3b3e681db9" width="300px">  
+
+ <img width="448" alt="Movil" src="https://github.com/EvaBustamante7/ecommerce-Google-front/assets/126781409/f05761d1-498b-49b5-9b43-a1d78b68d9e5">
  
+<img width="880" alt="Portatil" src="https://github.com/EvaBustamante7/ecommerce-Google-front/assets/126781409/91e30fed-0c13-4ec6-aa53-e0f7213f64fa">
+
+<img src="https://github.com/EvaBustamante7/ecommerce-Google-front/assets/126781409/a806341f-89e4-4191-b984-0e26b52baa84" width="300px">
+
+<img src="https://github.com/EvaBustamante7/ecommerce-Google-front/assets/126781409/f09039ce-897d-4d7e-9451-6fab42494803" width="300px">
+
  <img src="https://github.com/EvaBustamante7/ecommerce-Google-front/assets/126781409/d387fd5f-459c-4ac1-a926-e637374aaaca" width="300px">
+
+ <img width="300px" alt="galeria" src="https://github.com/EvaBustamante7/ecommerce-Google-front/assets/126781409/466c8fb8-f567-473f-80b3-05e9113735fa">
 
 ## Características Destacadas
 - Museo Virtual: Explora una colección diversa de obras de arte y esculturas en 3D.
@@ -55,8 +65,29 @@ Este proyecto fue creado por un equipo de 5 programadores de frontend y backend:
  <a href=""><img src= "https://img.shields.io/badge/Github-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white"></a>
  <a herf="https://trello.com/b/MEFwJ2xu/frases">
  <img src= "https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white"></a>
- 
+
 </p>
+
+  ## Instalar Proyecto
+
+* Clone git https://github.com/EvaBustamante7/ecommerce-Google-front.git
+* npm install
+- Comandos para la inmersiva:
+* npm install @react-three/drei
+* npm install @react-three/fiber
+* npm install leva
+- Para iconos footer:
+* npm i @fortawesome/react-fontawesome
+* npm i @fortawesome/free-brands-svg-icons
+* npm i slick-carousel
+* npm install react-google-recaptcha
+  
+
+
+## Tests 
+
+* Jest
+* Ejecutar: npm test
 
 ## Metodologia
 
