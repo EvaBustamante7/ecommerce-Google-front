@@ -72,6 +72,16 @@ Este proyecto fue creado por un equipo de 5 programadores de frontend y backend:
 
 * Clone git https://github.com/EvaBustamante7/ecommerce-Google-front.git
 * npm install
+- Comandos para la inmersiva:
+* npm install @react-three/drei
+* npm install @react-three/fiber
+* npm install leva
+- Para iconos footer:
+* npm i @fortawesome/react-fontawesome
+* npm i @fortawesome/free-brands-svg-icons
+* npm i slick-carousel
+* npm install react-google-recaptcha
+  
 
 
 ## Tests 
