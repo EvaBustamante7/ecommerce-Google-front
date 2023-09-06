@@ -1,17 +1,16 @@
 import React from 'react'
-import Log from './Log'
-
 import Navbar from '../navbar/Navbar'
+import Reg from './Reg'
 import Footer from '../footer/Footer'
 
-const Logreg = () => {
+const Regroute = () => {
   return (
     <>
     <Navbar/>
-    <Log/>
-    <Footer />
+    <Reg/>
+    <Footer/>
     </>
   )
 }
 
-export default Logreg
+export default Regroute

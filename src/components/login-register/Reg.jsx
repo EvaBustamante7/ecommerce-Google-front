@@ -66,36 +66,42 @@ const Reg = () => {
 
     return (
         <Fragment>
-            <div className='register'>
-                <form className="row" onSubmit={enviarDatos}>
-                    <header className="login-header">
-                        <h3 className="login-title">Sign Up</h3>
-                    </header>
-                    <div className="form-group p-3">
-                        <input type="text" placeholder="User" className="form-control" onChange={handleInputChange} name="user"></input>
+            <div className='container'>
+                <div className='screen'>
+                    <div className='screen__content'>
+                        <form className="login" onSubmit={enviarDatos}>
+                            <div className="login__field">
+                                <input type="text" placeholder="User" className="login__input" onChange={handleInputChange} name="user"></input>
+                            </div>
+                            <div className="login__field">
+                                <input type="text" placeholder="Password" className="login__input" onChange={handleInputChange} name="pass"></input>
+                            </div>
+                            <div className="login__field">
+                                <input type="text" placeholder="Name" className="login__input" onChange={handleInputChange} name="name"></input>
+                            </div>
+                            <div className="login__field">
+                                <input type="text" placeholder="Last Name" className="login__input" onChange={handleInputChange} name="last_name"></input>
+                            </div>
+                            <div className="login__field">
+                                <label>
+                                    <input type="checkbox" onChange={handleInputChange} name="agreeTerms" />
+                                    Acepto los términos y condiciones
+                                </label>
+                            </div>
+                            <div className="form-group p-3">
+                                <button type="submit" className="login__submit">Enviar</button>
+                            </div>
+                        </form>
                     </div>
-                    <div className="form-group p-3">
-                        <input type="text" placeholder="Password" className="form-control" onChange={handleInputChange} name="pass"></input>
+                    <div className='screen__background'>
+                        <span className='screen__background__shape screen__background__shape1'></span>
+                        <span className='screen__background__shape screen__background__shape2'></span>
+                        <span className='screen__background__shape screen__background__shape3'></span>
+                        <span className='screen__background__shape screen__background__shape4'></span>
                     </div>
-                    <div className="form-group p-3">
-                        <input type="text" placeholder="Name" className="form-control" onChange={handleInputChange} name="name"></input>
-                    </div>
-                    <div className="form-group p-3">
-                        <input type="text" placeholder="Last Name" className="form-control" onChange={handleInputChange} name="last_name"></input>
-                    </div>
-                    <div className="form-group p-3">
-                        <label>
-                            <input type="checkbox" onChange={handleInputChange} name="agreeTerms" />
-                            Acepto los términos y condiciones
-                        </label>
-                    </div>
-                    <div className="form-group p-3">
-                        <button type="submit" className="btn btn-primary">Enviar</button>
-                    </div>
-                </form>
+                </div>
             </div>
-            
-        </Fragment>
+        </Fragment >
     );
 }
 
