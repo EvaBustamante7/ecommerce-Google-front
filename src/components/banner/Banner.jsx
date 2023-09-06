@@ -7,7 +7,11 @@ const Banner = (props) => {
       <div className="widget-1">
         <h2>{props.title}</h2>
         <p>{props.text}</p>
-        {props.showButton && <button>{props.buttonText}</button>}
+        {props.showButton && (
+                    <a href={props.href} className="button-link">
+                        {props.buttonText}
+                    </a>
+                )}
       </div>
       <div className="widget-2">
         <img src={props.image} alt="Imagen" />
