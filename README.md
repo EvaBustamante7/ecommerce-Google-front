@@ -56,6 +56,10 @@ Este proyecto fue creado por un equipo de 5 programadores de frontend y backend:
  <img src= "https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white"></img>
  <img src= "https://img.shields.io/badge/Symfony-%23E34F26.svg?style=for-the-badge&logo=Symfony&logoColor=white"></img>
  <img src= "https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white"></img> 
+ <img src= "https://github.com/EvaBustamante7/ecommerce-Google-front/assets/126781409/a49691c9-cf99-4c1f-a087-7f250270dc1a" width="50px">
+<img src= "https://github.com/EvaBustamante7/ecommerce-Google-front/assets/126781409/a038a925-ca6a-4bc4-9150-ccc699d11ff9" width="50px">
+<img src= "https://github.com/EvaBustamante7/ecommerce-Google-front/assets/126781409/8521051f-7a7d-4d8c-aa4c-134d35941754" width="50px">
+
  
  </p>
 
@@ -65,6 +69,7 @@ Este proyecto fue creado por un equipo de 5 programadores de frontend y backend:
  <a href=""><img src= "https://img.shields.io/badge/Github-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white"></a>
  <a herf="https://trello.com/b/MEFwJ2xu/frases">
  <img src= "https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white"></a>
+ <img src= "https://github.com/ZManzanares87/ecommerce-Google-back/assets/126781409/d9181002-e7cd-4039-8a1a-4f2422d7128f" width="50px">
 
 </p>
 
