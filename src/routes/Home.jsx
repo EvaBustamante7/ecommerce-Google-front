@@ -7,7 +7,7 @@ import  galeria from '../components/assets/galeria.png'
 import ModelViewer from '../components/modelviewer/model_viewer'
 import LogoViewer from '../components/logoViewer/logoViewer'
 import Metaverso from '../components/Metaverso/Metaverso'
-import Metaverso1 from '../components/assets/Metaverso1.mp4'
+import Metaverso1 from '../components/assets/Metaverso.mp4'
 
 
 const Home = () => {
