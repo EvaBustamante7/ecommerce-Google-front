@@ -69,10 +69,6 @@ Este proyecto fue creado por un equipo de 5 programadores de frontend y backend:
  <a href=""><img src= "https://img.shields.io/badge/Github-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white"></a>
  <a herf="https://trello.com/b/MEFwJ2xu/frases">
  <img src= "https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white"></a>
-<<<<<<< HEAD
- <img src= "https://github.com/ZManzanares87/ecommerce-Google-back/assets/126781409/d9181002-e7cd-4039-8a1a-4f2422d7128f" width="50px">
-=======
->>>>>>> 0ab73b730deeb8dd9fd043226aecc0476c58ec8f
 
 </p>
 
