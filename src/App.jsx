@@ -6,8 +6,8 @@ import Inmersiva from './routes/Inmersiva';
 import Products from './routes/Products';
 import Obj3d from './routes/Obj3d'
 import About from './components/about/About';
-import Loger from './components/login-register/Loger';
-import Regroute from './components/login-register/Regroute';
+import Loger from './routes/Loger';
+import Regroute from './routes/Regroute';
 
 function App() {
   return (
