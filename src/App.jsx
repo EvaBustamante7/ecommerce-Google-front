@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import Home from './routes/Home';
 import Contact from './routes/Contact';
 import Inmersiva from './routes/Inmersiva';
@@ -9,10 +9,12 @@ import Reg from './components/login-register/Reg';
 import Obj3d from './routes/Obj3d'
 import About from './components/about/About';
 import Logreg from './components/login-register/Logreg';
+import ProductView from './components/products/ProductView'
 
 function App() {
   return (
     <div>
+      
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/contact' element={<Contact/>} />
@@ -23,6 +25,7 @@ function App() {
         <Route path='/objeto' element={<Obj3d/>} />
         <Route path='/about' element={<About/>} />
         <Route path='/log' element={<Logreg/>} />
+        <Route path='/products/:id' element={<ProductView/>} />
 
 
       </Routes>

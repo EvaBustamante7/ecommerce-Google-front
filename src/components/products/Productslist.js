@@ -22,26 +22,18 @@ const ProductList = () => {
 
   return (
     <>
-    <h1>Productos</h1>
+     <h1>Productos</h1>
     <div className='container'>
       <div className='product-list'>
         {products.map(product => (
           <div className='product' key={product.id}>
-             <h3>{product.name}</h3>
-            <img src={`https://127.0.0.1:8000/uploads/brochures/${product.image}`} alt={product.name} />
-            <img src={`https://127.0.0.1:8000/uploads/brochures/${product.qr}`} alt={`${product.name}QR`} />
-            
-            <p>Precio: {product.price} €</p>
+            <Link to={`/products/${product.id}`} onClick={() => window.dataLayer.push({ 'event': 'detail_product_view' })}>
+              <h3>{product.name}</h3>
+              <img src={`https://127.0.0.1:8000/uploads/brochures/${product.image}`} alt={product.name} />
+              <img src={`https://127.0.0.1:8000/uploads/brochures/${product.qr}`} alt={`${product.name}QR`} />
+              <p>Precio: {product.price} €</p>
+            </Link>
             <button onClick={() => addToCart(product)}>Añadir al carrito</button>
-          </div>
-        ))}
-      </div>
-      <h2>Carrito de Compras</h2>
-      <div className='cart'>
-        {cart.map(product => (
-          <div className='cart-item' key={product.id}>
-            <h4>{product.name}</h4>
-            <p>Precio: {product.price} €</p>
           </div>
         ))}
       </div>

@@ -91,34 +91,8 @@ const DetailsProduct = ({
                             </p>
                             <p className="fruit-detail__price"><strong>Precio por kilo:</strong> {product.price}€</p>
                         </div>
-                        <div className="quantity-container">
-                            <button
-                                className={selectedOption === '0.5kg' ? 'active' : ''}
-                                onClick={() => handleOptionChange('0.5kg', 0.5)}
-                                >
-                                0.5kg
-                            </button>
-                            <button
-                                className={selectedOption === '1kg' ? 'active' : ''}
-                                onClick={() => handleOptionChange('1kg', 1)}
-                                >
-                                1kg
-                            </button>
-                            <button
-                                className={selectedOption === '3kg' ? 'active' : ''}
-                                onClick={() => handleOptionChange('3kg', 3)}
-                                >
-                                3kg
-                            </button>
-                            {selectedOption !== '' && (
-                                <p className="fruit-detail__price">
-                                    <strong>Total:</strong> {selectedOption === '1kg' ? `${product.price}€` : `${newPrice}€`}
-                                </p>
-                            )}
-                            <div className="add-trolley">
-                                <button onClick={() => onAddProduct({...product, price: selectedOption === '1kg' ? product.price : newPrice, quantity: weight})}>Añadir al carrito</button>
-                            </div>
-                        </div>
+                       
+                       
                         <p><a className='back-to-shop' href="/products">Seguir comprando</a></p>
                     </div>
                 </div>
