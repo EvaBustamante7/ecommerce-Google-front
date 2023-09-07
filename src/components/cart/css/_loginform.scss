@@ -1,0 +1,82 @@
+
+
+@import '../utilities/variable';
+
+.form-login {
+  background-image:url(../../images/fondobolsa.jpg);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 45px;
+  width: 100%;
+  margin: 120px auto;
+  max-width: 410px;
+  @media(max-width:800px){
+    margin: 50px 20px;
+    box-sizing: border-box;
+    justify-content: center;
+    width: 90%;
+  }
+  
+  .title_sesion {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color:$color-verde;
+    text-transform: uppercase;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .input_descripcion {
+      width: 100%;
+      border-radius: 5px;
+      border: none;
+      padding: 10px;
+      margin-bottom: 20px;
+      &:focus{
+        border: 1px solid $color-amarillo;
+        outline: none;
+    }
+    
+    }
+    .error {
+      color: $color-error;
+      margin-top:-15px;
+      margin-bottom: 15px;
+      font-weight: bold;
+      text-align: left;
+    }
+    
+    .btn.auto {
+      background:$color-azul;
+      border: none;
+      width: 50%;
+      border-radius: 0.5rem;
+      color:$color-blanco;
+      padding: 0.5rem 2rem;
+      font-size: 1rem;
+      margin-bottom: 15px;
+      font-weight: 500;
+      &:hover{
+        background-color: $color-verde;
+      }
+    }
+    
+    p{
+      margin-bottom: 30px;
+      a{
+        font-weight: bold;
+        text-decoration: none;
+        color: $color-verde;
+        &:hover{
+          color: $color-azul;
+        }
+      }
+    }
+  }
+}

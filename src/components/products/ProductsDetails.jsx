@@ -1,7 +1,7 @@
 import { React, useState } from 'react'
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer'
-import DetailsProduct from '../Components/DetailsProduct'
+import ProductView from './ProductView'
 
 function ProductsDetails() {
     
@@ -19,7 +19,7 @@ function ProductsDetails() {
             countProducts={countProducts}
             setCountProducts={setCountProducts}
             />
-            <DetailsProduct
+            <ProductView
                 allProducts={allProducts}
                 setAllProducts={setAllProducts}
                 total={total}

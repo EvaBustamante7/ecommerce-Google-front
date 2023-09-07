@@ -1,0 +1,113 @@
+// Estilos página de preguntas frecuentes
+@import "../utilities/variable";
+
+.section-faqs {
+    margin-top: 100px;
+
+    @media (max-width:745px) {
+        margin: auto;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+    }
+
+    .faqs {
+        width: 90%;
+        margin: 0 auto;
+        .title-section {
+            position: relative;
+            text-align: center;
+            text-align: center;
+            padding-bottom: 0;
+            margin-bottom: 30px;
+
+            @media (max-width:745px) {
+                margin-bottom: 0.5rem;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 80px;
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+        }
+        .faqs-grid {
+            margin: 65px auto;
+
+            @media (max-width:745px) {
+                margin: 0 auto;
+            }
+
+            .faqs-item {
+                width: 100%;
+                margin: 0 0 20px 0;
+                padding: 0;
+                display: block;
+                .faqs-title {
+                    display: flex;
+                    position: relative;
+                    background-color: $color-gris-claro;
+                    border: 1px solid #ddd;
+                    color: $color-slogan;
+                    font-size: 18px;
+                    font-weight: 600;
+                    text-decoration: none;
+                    padding: 20px;
+                    outline: none;
+                    transition: 0.4s;
+                    &:hover {
+                        background-color: $color-naranja;
+                        color: $color-gris-claro;
+                    }
+                    &.active {
+                        background-color: $color-naranja;
+                        color: $color-gris-claro;
+                        &:after {
+                            content: "\2212";
+                        }
+                    }
+                    &:after {
+                        content: '\002B';
+                        color: $color-gris;
+                        font-weight: normal;
+                        float: right;
+                        margin-left: auto;
+                        font-size: 24px;
+                        line-height: 1;
+                        padding-left: 20px;
+                    }
+
+                    @media (max-width:745px) {
+                        font-size: 1rem;
+                        padding: 10px;
+                        outline: none;
+                    }
+                }
+                .faqs-content {
+                    padding: 0;
+                    max-height: fit-content;
+                    overflow: hidden;
+                    transition: max-height 0.2s ease-out;
+                    .faqs-content-inside {
+                        text-align: justify;
+                        padding: 20px;
+                        color:$color-slogan;
+
+                        @media (max-width:745px) {
+                            padding-top: 0.2rem;
+                            font-size: 0.9rem;
+                            padding: 0 5px;
+                        }
+                    }
+                    &.no-height {
+                        max-height: 0;
+                    }
+                }
+            }
+        }  
+    }
+}

@@ -1,0 +1,117 @@
+@import '../utilities/variable';
+
+.about__container {
+    margin-top: 8rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    @media(max-width:900px){
+        margin-top: 1rem;
+    }
+    
+
+    .about__title {
+        display: grid;
+        gap: 0.4em;
+        text-align: center;
+        .about-title{
+            font-size: 30px;
+            @media(max-width:800px){
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .about__box {
+        width: 90%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .about__right {
+            width: 40%;
+            overflow: hidden;
+            @media(max-width:800px){
+                width: 70%; 
+            }
+            
+
+            img {
+                height: auto;
+                width: 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                order: 1;
+                transition: 0.5s ease;
+                cursor: pointer;
+                animation: profile__animate 8s ease-in-out infinite 1s;
+
+                @keyframes profile__animate {
+                    0% {
+                        border-radius: 40% 20%;
+                    }
+
+                    50% {
+                        border-radius: 20% 40%;
+                    }
+
+                    100% {
+                        border-radius: 40% 20% 40%;
+                    }
+                }
+                @media(min-width:1400px){
+                    width: 80%; 
+                    margin-left: 70px;
+                }
+                
+            }
+            
+        }
+    }
+
+    .about__left {
+        display: grid;
+        width: 60%;
+        @media (max-width:700px){
+            display: grid;
+            gap: 1rem;
+            width: 70%;
+        }
+        
+    }
+
+    .about__text {
+        line-height: 1.8;
+        padding: 30px;
+        font-weight: 400;
+        margin-bottom: 0;
+        @media(min-width:1400px){
+            font-size: 1vw; 
+        }
+    }
+
+
+    @media screen and (max-width: 800px) {
+        .about__box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column-reverse;
+        }
+
+        .about__right {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .about__left {
+            width: auto;
+            padding: -20px;
+            font-size: 0.9em;
+            
+        }
+    }
+}

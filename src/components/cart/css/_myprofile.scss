@@ -1,0 +1,151 @@
+@import '../utilities/variable';
+
+.container-profile {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	width: 650px;
+	height: 450px;
+	background-image: url(../../images/bolsappel1.png);
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	overflow: hidden;
+	margin: 50px auto;
+	margin-top: 140px;
+    .fixed-container {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        background-color: $color-blanco;
+        z-index: 1;
+    }
+}
+
+.inp-profile {
+	margin-bottom: 10px;
+	width: 70%;
+	border-radius: 5px;
+	border: none;
+	padding: 10px;
+	margin-bottom: 20px;
+	&:focus {
+		border: 1px solid orange;
+		outline: none;
+	}
+}
+.box {
+	height: 300px;
+	width: 550px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 45px;
+	margin-top: 10px;
+}
+.tab-list {
+	height: 50px;
+	width: 650px;
+	display: flex;
+	list-style: none;
+	font-size: 18px;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: space-between;
+	top: 77px;
+	z-index: 1;
+	list-style-type: none;
+}
+.tabs {
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	cursor: pointer;
+	padding: 10px;
+	font-weight: bold;
+	background: #2D607C;
+	color: $color-blanco;
+	&:not(:last-child) {
+		border-right: 1px solid rgba(0, 0, 0, 0.3);
+	}
+}
+.active-tabs {
+	background: #587608;
+	color: $color-blanco;
+	border-bottom: 2px solid #235c02;
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: -4px;
+		left: 50%;
+	}
+}
+.title-table {
+	color: $color-correcto;
+}
+.content-container {
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 30px;
+}
+.content {
+	display: none;
+	width: 100%;
+}
+.active-content {
+	display: block;
+}
+table {
+	width: 100%;
+}
+.btn-auto {
+	background: #2D607C;
+	border: none;
+	width: 40%;
+	border-radius: 4px;
+	color: $color-blanco;
+	padding: 0.5rem 2rem;
+	font-size: 1rem;
+	font-weight: 400;
+	margin-bottom: 20px;
+	&:hover {
+		background-color: $color-verde;
+	}
+}
+@media (max-width:700px) {
+	.box {
+		margin: 0 auto;
+		margin-top: -20px;
+		margin: 0 auto;
+		width: 90%;
+	}
+	.content.active-content {
+		display: flex;
+		justify-content: center;
+	}
+	.tab-list {
+		margin-bottom: 0;
+		width: 340px;
+	}
+	.title-table {
+		font-size: 12px;
+	}
+	th.table-content {
+		font-size: 12px;
+	}
+	#root {
+		height: 65vh;
+	}
+	.container-profile {
+		box-sizing: border-box;
+		width: 90%;
+		margin: 20px;
+	}
+	.btn-auto {
+		width: auto;
+	}
+}

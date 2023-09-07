@@ -29,6 +29,7 @@ const DetailsProduct = ({
     let productToAdd = {
       ...product,
       quantity: 1,
+      price: product.price
     };
 
     let productIndex = allProducts.findIndex((item) => item.id === productToAdd.id);
@@ -56,7 +57,7 @@ const DetailsProduct = ({
             <div className="text">
               <h2 className="fruit-detail__title">{product.name}</h2>
               <h2 className="fruit-detail__title">{product.price}</h2>
-             
+              <button onClick={() => onAddProduct(product)}>Añadir al carrito</button>
             
             </div>
             <p><a className='back-to-shop' href="/products">Seguir comprando</a></p>

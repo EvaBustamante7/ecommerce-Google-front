@@ -1,0 +1,28 @@
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    position: relative;
+    border:1px solid grey;
+    border-radius: 50px;
+
+    .search-input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 30px;
+      border: none;
+      font-size: 16px;
+      outline: none;
+      
+    }
+    
+    .search-icon {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 15px;
+      color: #aaa;
+    }
+  }

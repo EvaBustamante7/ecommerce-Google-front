@@ -1,0 +1,44 @@
+@import '../utilities/variable.scss';
+.terms{
+    padding-top: 95px;
+    @media(max-width:800px){
+        padding-top: 0;
+    }
+    .title-section{
+        color: $color-verde;
+        margin-bottom: 50px;
+        text-transform: uppercase;
+        font-size: 24px;
+    }
+
+    .content{
+        margin: 0 auto;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-weight: 400;
+        @media(max-width:770px){
+            margin: 0 auto;
+        }
+
+        a{
+            text-decoration: none;            
+        }
+        .btn-back{
+            margin-top: 30px;
+            border: 1px solid $color-azul;
+            color: $color-azul;
+            padding: 5px;
+            border-radius: 5px;
+            background-color: $color-azul;
+            color: $color-blanco;
+            text-align: center;
+            &:hover{
+                background-color: $color-verde;
+            }
+
+        }
+    }
+}
