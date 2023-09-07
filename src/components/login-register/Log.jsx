@@ -2,7 +2,7 @@ import React, { Fragment, useState } from 'react';
 import { urlLogin } from '../../Servicies/urls';
 import { Link } from 'react-router-dom';
 import './css/Logreg.css';
-import { FaUser, FaLock, FaChevronRight } from 'react-icons/fa';
+import { FaUser, FaLock, FaChevronRight, FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const Log = () => {
   const [datos, setDatos] = useState({
@@ -15,6 +15,8 @@ const Log = () => {
     userError: '',
     passError: '',
   });
+
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleInputChange = (event) => {
     setDatos({
@@ -36,6 +38,10 @@ const Log = () => {
       });
     }
   };
+  
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
 
   const enviarDatos = (event) => {
     event.preventDefault();
@@ -48,7 +54,7 @@ const Log = () => {
     function saveToken(result) {
       var token = JSON.parse(result).token;
       localStorage.setItem('token', token);
-      alert('Acceso concedido y token guardado en localStorage');
+      alert('¡Bienvenido de nuevo!');
     }
 
     var myHeaders = new Headers();
@@ -87,10 +93,20 @@ const Log = () => {
                 <span className='login__icon'>
                   <FaLock />
                 </span>
-                <input
-                  type='password' placeholder='Password' className='login__input' onChange={handleInputChange}
-                  name='pass'
-                />
+                <div className='password-input'>
+                  <input
+                    type={showPassword ? 'text' : 'password'}
+                    placeholder='Password'
+                    className='login__input'
+                    onChange={handleInputChange}
+                    name='pass'
+                  />
+                  {showPassword ? (
+                    <FaEyeSlash onClick={togglePasswordVisibility} />
+                  ) : (
+                    <FaEye onClick={togglePasswordVisibility} />
+                  )}
+                </div>
                  {errors.userError && <p className='error'>{errors.passError}</p>}
               </div>
               <button
@@ -104,8 +120,8 @@ const Log = () => {
                 </span>
               </button>
               <div className="login-links">
-                <p>Don't have an account?</p>
-                <Link to="/register">Signup</Link>
+                <p>¿No tienes cuenta?</p>
+                <Link to="/register">Regístrate</Link>
               </div>
             </form>
           </div>
