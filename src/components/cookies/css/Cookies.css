@@ -1,0 +1,37 @@
+@charset "UTF-8";
+/*Paleta oscura*/
+/*Paleta clara*/
+/* Cookies.scss */
+.cookie {
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #ffffff;
+  margin: 150px auto;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px #000000;
+  width: 700px;
+}
+.cookie p {
+  margin: 0;
+}
+.cookie h2 {
+  margin-top: 20px;
+}
+.cookie ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+.cookie li {
+  padding: 10px auto;
+}
+
+/* Media query para dispositivos pequeños */
+@media (max-width: 768px) {
+  .cookie {
+    font-size: 14px;
+    margin: 120px auto;
+    padding: 20px;
+    max-width: 700px;
+    width: 90%;
+  }
+}/*# sourceMappingURL=Cookies.css.map */

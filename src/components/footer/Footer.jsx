@@ -53,7 +53,7 @@ const Footer = () => {
       </div>
 
       <div className="bottom-bar">
-        <p>&copy; 2023 Google3da. All rights reserved. <a href="/Platform terms">Platform terms.</a><a href="/ Privacy policy">Privacy policy.</a><a href="/ Cookie Policy"> Cookie Policy</a></p>
+      <p>&copy; 2023 Google3da. proyecto pedagógico. <a href="/Platform terms">Platform terms.</a> <Link to="/privacy-policy">Política de privacidad.</Link> <Link to="/cookies">Política de cookies</Link></p>
       </div>
     </footer>
 
