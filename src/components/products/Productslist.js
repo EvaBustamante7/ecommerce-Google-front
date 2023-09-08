@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { ProductContext } from './ProductContext';
 import { useParams } from 'react-router-dom';
 
 const ProductList = () => {
-  const { id } = useParams();
-  const [products, setProducts] = useState([]);
-  const [cart, setCart] = useState([]);
-  const [total, setTotal] = useState(0);
+  const { product, setProduct, total, setTotal, countProducts, setCountProducts,cart,setCart } = useContext(ProductContext);
+
 
   const addToCart = (product) => {
     const updatedCart = [...cart, product];
@@ -21,7 +20,7 @@ const ProductList = () => {
 
     fetch('https://127.0.0.1:8000/api/products')
       .then(response => response.json())
-      .then(data => setProducts(data))
+      .then(data => setProduct(data))
       .catch(error => console.error(error));
   }, []);
 
@@ -37,7 +36,7 @@ const ProductList = () => {
       <h1>Productos</h1>
       <div className='container'>
         <div className='product-list'>
-          {products.map(product => (
+          {product.map(product => (
             <div className='product' key={product.id}>
               <h3>{product.name}</h3>
               <img src={`https://127.0.0.1:8000/uploads/brochures/${product.image}`} alt={product.name} />

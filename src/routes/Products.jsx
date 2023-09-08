@@ -4,7 +4,7 @@ import Navbar from '../components/navbar/Navbar'
 import Productslist from '../components/products/Productslist';
 
 
-function Login() {
+function Products() {
   return (
     <>
       <h1>Products</h1>
@@ -15,4 +15,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Products;

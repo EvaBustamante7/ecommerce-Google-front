@@ -1,23 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { ProductContext } from './ProductContext';
 import { useParams } from 'react-router-dom';
+
 import AOS from "aos";
 import 'aos/dist/aos.css';
 
 const Detail= ({
   allProducts,
   setAllProducts,
-  countProducts,
-  setCountProducts,
-  total,
-  setTotal,
+
+
 }) => {
   const { id } = useParams();
-  const [product, setProduct] = useState({});
+  const { product, setProducts, total, setTotal, countProducts, setCountProducts,cart,setCart } = useContext(ProductContext);
 
   useEffect(() => {
     fetch(`https://127.0.0.1:8000/api/products/${id}`)
       .then(res => res.json())
-      .then(data => setProduct(data))
+      .then(data => setProducts(data))
       .catch(err => console.log(err));
 
     AOS.init({
