@@ -40,7 +40,7 @@ const ProductList = ({
 
               <p>Precio: {product.price} €</p>
               <button onClick={() => addToCart(product)}>Añadir al carrito</button>
-              <Link to={`/product/${product.id}`}>Ver Detalles</Link>
+              <Link to={`/products/${product.id}`}>Ver Detalles</Link>
 
             </div>
           ))}
