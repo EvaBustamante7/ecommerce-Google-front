@@ -16,6 +16,15 @@
   margin-top: 100px;
 }
 
+.screen__reg {
+  background: linear-gradient(90deg, rgb(190, 186, 186), rgb(186, 179, 179));
+  position: relative;
+  height: auto;
+  width: 360px;
+  box-shadow: 0px 0px 15px rgb(140, 140, 140);
+  margin-top: 120px;
+}
+
 .screen__content {
   z-index: 1;
   position: relative;
@@ -75,9 +84,25 @@
 }
 
 .login {
-  padding: 30px;
-  margin-top: 60px;
-  box-shadow: 0 0 5px rgb(22, 22, 22);
+  width: 300px;
+  margin-top: 78px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  border: 1px solid #EFEAE5;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+
+.reg {
+  width: 300px;
+  margin: 25px auto;
+  padding: 20px;
+  border: 1px solid #EFEAE5;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
 }
 
 .login__field {
@@ -112,7 +137,8 @@
 .login__submit {
   background: #fff;
   font-size: 14px;
-  margin-top: 30px;
+  margin-top: 15px;
+  margin-bottom: 25px;
   padding: 16px 20px;
   border-radius: 26px;
   border: 1px solid #D4D3E8;

@@ -57,6 +57,8 @@
     width: 200px;
     height: 100px;
     margin-left: -5px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .nav-menu {
     position: absolute;
