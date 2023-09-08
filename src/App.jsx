@@ -9,11 +9,13 @@ import About from './components/about/About';
 import Productdetail from './routes/Productdetail';
 import Loger from './routes/Loger';
 import Regroute from './routes/Regroute';
+import ScrollToTop from './Scroll/ScrollToTop';
 
 
 function App() {
   return (
     <div>
+      <ScrollToTop/>
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/contact' element={<Contact/>} />
