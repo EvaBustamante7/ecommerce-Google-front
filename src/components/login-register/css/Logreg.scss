@@ -5,24 +5,34 @@
 	align-items: center;
 	justify-content: center;
 	min-height: 100vh;
+
 }
 
-.screen {		
-	background: linear-gradient(90deg, rgb(190, 186, 186), rgb(186, 179, 179));		
-	position: relative;	
+.screen {
+	background: linear-gradient(90deg, rgb(190, 186, 186), rgb(186, 179, 179));
+	position: relative;
 	height: 500px;
-	width: 360px;	
+	width: 360px;
 	box-shadow: 0px 0px 15px rgb(140, 140, 140);
-    margin-top: 100px;
+	margin-top: 100px;
+}
+
+.screen__reg {
+	background: linear-gradient(90deg, rgb(190, 186, 186), rgb(186, 179, 179));
+	position: relative;
+	height: auto;
+	width: 360px;
+	box-shadow: 0px 0px 15px rgb(140, 140, 140);
+	margin-top: 120px;
 }
 
 .screen__content {
 	z-index: 1;
-	position: relative;	
+	position: relative;
 	height: 100%;
 }
 
-.screen__background {		
+.screen__background {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -30,7 +40,7 @@
 	bottom: 0;
 	z-index: 0;
 	-webkit-clip-path: inset(0 0 0 0);
-	clip-path: inset(0 0 0 0);	
+	clip-path: inset(0 0 0 0);
 }
 
 .screen__background__shape {
@@ -41,18 +51,18 @@
 .screen__background__shape1 {
 	height: 520px;
 	width: 520px;
-	background: #FFF;	
+	background: #FFF;
 	top: -50px;
-	right: 120px;	
+	right: 120px;
 	border-radius: 0 72px 0 0;
 }
 
 .screen__background__shape2 {
 	height: 220px;
 	width: 220px;
-	background: $green;	
+	background: $green;
 	top: -172px;
-	right: 0;	
+	right: 0;
 	border-radius: 32px;
 }
 
@@ -61,29 +71,46 @@
 	width: 190px;
 	background: linear-gradient(270deg, $blue, $blue);
 	top: -24px;
-	right: 0;	
+	right: 0;
 	border-radius: 32px;
 }
 
 .screen__background__shape4 {
 	height: 400px;
 	width: 200px;
-	background: rgb(255, 236, 33);	
+	background: rgb(255, 236, 33);
 	top: 420px;
-	right: 50px;	
+	right: 50px;
 	border-radius: 60px;
 }
 
 .login {
-  padding: 30px;
-  margin-top: 60px;
-  box-shadow: 0 0 5px rgb(22, 22, 22);
+	width: 300px;
+	margin-top: 78px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px;
+	border: 1px solid $blue_2;
+	border-radius: 5px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+	background-color: #fff;
+
+}
+
+.reg {
+	width: 300px;
+	margin: 25px auto;
+	padding: 20px;
+	border: 1px solid $blue_2;
+	border-radius: 5px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+	background-color: #fff;
 
 }
 
 .login__field {
-	padding: 20px 0px;	
-	position: relative;	
+	padding: 20px 0px;
+	position: relative;
 }
 
 .login__icon {
@@ -113,7 +140,8 @@
 .login__submit {
 	background: #fff;
 	font-size: 14px;
-	margin-top: 30px;
+	margin-top: 15px;
+	margin-bottom: 25px;
 	padding: 16px 20px;
 	border-radius: 26px;
 	border: 1px solid #D4D3E8;
@@ -141,7 +169,7 @@
 	color: #1d1d1e;
 }
 
-.social-login {	
+.social-login {
 	position: absolute;
 	height: 140px;
 	width: 160px;
@@ -160,12 +188,10 @@
 .social-login__icon {
 	padding: 20px 10px;
 	color: #fff;
-	text-decoration: none;	
+	text-decoration: none;
 	text-shadow: 0px 0px 8px #7875B5;
 }
 
 .social-login__icon:hover {
-	transform: scale(1.5);	
+	transform: scale(1.5);
 }
-  
-  
