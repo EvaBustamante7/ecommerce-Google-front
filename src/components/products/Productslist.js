@@ -19,7 +19,7 @@ const ProductList = () => {
       setCart(JSON.parse(storedCart));
     }
 
-    fetch('https://127.0.0.1:8000/api/products')
+    fetch('http://127.0.0.1:8000/api/products')
       .then(response => response.json())
       .then(data => setProducts(data))
       .catch(error => console.error(error));
@@ -40,8 +40,8 @@ const ProductList = () => {
           {products.map(product => (
             <div className='product' key={product.id}>
               <h3>{product.name}</h3>
-              <img src={`https://127.0.0.1:8000/uploads/brochures/${product.image}`} alt={product.name} />
-              <img src={`https://127.0.0.1:8000/uploads/brochures/${product.qr}`} alt={`${product.name}QR`} />
+              <img src={`http://127.0.0.1:8000/uploads/brochures/${product.image}`} alt={product.name} />
+              <img src={`http://127.0.0.1:8000/uploads/brochures/${product.qr}`} alt={`${product.name}QR`} />
               <p>Precio: {product.price} €</p>
               <button onClick={() => addToCart(product)}>Añadir al carrito</button>
               <Link to={`/products/${product.id}`}>Ver Detalles</Link>

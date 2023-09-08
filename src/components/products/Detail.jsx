@@ -3,19 +3,19 @@ import { useParams } from 'react-router-dom';
 import AOS from "aos";
 import 'aos/dist/aos.css';
 
-const Detail= ({
+const Detail = ({
   allProducts,
   setAllProducts,
-  countProducts,
-  setCountProducts,
-  total,
-  setTotal,
+
 }) => {
+
   const { id } = useParams();
   const [product, setProduct] = useState({});
+  const [total, setTotal] = useState({});
+  const [countProducts, setCountProducts] = useState({});
 
   useEffect(() => {
-    fetch(`https://127.0.0.1:8000/api/products/${id}`)
+    fetch(`http://127.0.0.1:8000/api/products/${id}`)
       .then(res => res.json())
       .then(data => setProduct(data))
       .catch(err => console.log(err));
@@ -50,14 +50,14 @@ const Detail= ({
     <div data-aos="fade-down" key={product.id}>
       <div className="fruit-detail">
         <div className="fruit-card">
-          <img src={`https://127.0.0.1:8000/uploads/brochures/${product.image}`} alt={product.name} className="fruit-detail__image zoom-image" />
-          <img src={`https://127.0.0.1:8000/uploads/brochures/${product.qr}`} alt={product.name} className="fruit-detail__image zoom-image" />
+          <img src={`http://127.0.0.1:8000/uploads/brochures/${product.image}`} alt={product.name} className="fruit-detail__image zoom-image" />
+          <img src={`http://127.0.0.1:8000/uploads/brochures/${product.qr}`} alt={product.name} className="fruit-detail__image zoom-image" />
           <div className="p-fruits">
             <div className="text">
               <h2 className="fruit-detail__title">{product.name}</h2>
               <h2 className="fruit-detail__title">{product.price}</h2>
-             
-              <button onClick={() => onAddProduct(product)}>AÃ±adir al carrito</button>
+
+              <button onClick={() => onAddProduct(product)}>Añadir al carrito</button>
             </div>
             <p><a className='back-to-shop' href="/products">Seguir comprando</a></p>
           </div>
