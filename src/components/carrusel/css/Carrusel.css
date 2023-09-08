@@ -33,14 +33,9 @@
 }
 
 @media screen and (max-width: 768px) {
-  .carousel-container,
-  .carousel-item,
-  img {
-    max-width: 80%;
-    max-height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    border-radius: 5px;
+  .carousel-container {
+    margin: 0 auto;
+    width: 356px;
   }
   .slick-prev:before,
   .slick-next:before {
