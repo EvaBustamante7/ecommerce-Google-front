@@ -8,6 +8,8 @@ import Obj3d from './routes/Obj3d'
 import About from './components/about/About';
 import Loger from './components/login-register/Loger';
 import Regroute from './components/login-register/Regroute';
+import Cookies from './components/cookies/Cookies';
+import Privacy from './components/privacy-policy/Privacy';
 
 function App() {
   return (
@@ -21,7 +23,8 @@ function App() {
         <Route path='/objeto' element={<Obj3d/>} />
         <Route path='/about' element={<About/>} />
         <Route path='/log' element={<Loger/>} />
-
+        <Route path='/cookies' element={<Cookies/>} />
+        <Route path='/privacy-policy' element={<Privacy/>} />
 
       </Routes>
     </div>
