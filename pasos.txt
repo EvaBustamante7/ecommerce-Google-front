@@ -1,0 +1,7 @@
+Pasos Authorization
+crea las cuatro vistas
+inicia una vista profile que solo se podra acceder cuando nos logueemos
+crea otra vista de logaut
+En el componenete app importa browserrouter,routes,route para rutas
+crea carpeta en src  config dentro routes y mete pahts
+donde pone...
