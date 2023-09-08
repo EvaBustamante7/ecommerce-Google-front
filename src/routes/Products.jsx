@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Footer from '../components/footer/Footer'
 import Navbar from '../components/navbar/Navbar'
 import Productslist from '../components/products/Productslist';
+import { useParams } from 'react-router-dom';
+import { useCart } from '../components/products/CartContext'; // Importa useCart
 
 
-function Login() {
+
+function Products() {
   return (
     <>
-      <h1>Products</h1>
       <Navbar />
       <Productslist/>
       <Footer />
@@ -15,4 +17,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Products;

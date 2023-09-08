@@ -1,18 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { useCart } from './CartContext'; // Importa useCart
 import AOS from "aos";
 import 'aos/dist/aos.css';
 
-const Detail = ({
-  allProducts,
-  setAllProducts,
-
-}) => {
-
+const Detail = () => {
   const { id } = useParams();
+  const { addToCart } = useCart(); // Obtiene la función addToCart del contexto
   const [product, setProduct] = useState({});
-  const [total, setTotal] = useState({});
-  const [countProducts, setCountProducts] = useState({});
 
   useEffect(() => {
     fetch(`http://127.0.0.1:8000/api/products/${id}`)
@@ -25,25 +20,9 @@ const Detail = ({
     });
   }, [id]);
 
-  const onAddProduct = (product) => {
-    let productToAdd = {
-      ...product,
-      quantity: 1,
-    };
-
-    let productIndex = allProducts.findIndex((item) => item.id === productToAdd.id);
-
-    if (productIndex !== -1) {
-      const products = [...allProducts];
-      //products[productIndex].quantity += productToAdd.quantity;
-      setTotal(total + productToAdd.price);
-      setCountProducts(countProducts + 1);
-      return setAllProducts(products);
-    }
-
-    setTotal(total + productToAdd.price);
-    setCountProducts(countProducts + 1);
-    setAllProducts([...allProducts, productToAdd]);
+  const onAddProduct = () => {
+    // Puedes agregar el producto al carrito utilizando la función addToCart del contexto
+    addToCart(product);
   };
 
   return (
@@ -57,7 +36,7 @@ const Detail = ({
               <h2 className="fruit-detail__title">{product.name}</h2>
               <h2 className="fruit-detail__title">{product.price}</h2>
 
-              <button onClick={() => onAddProduct(product)}>Añadir al carrito</button>
+              <button onClick={onAddProduct}>Añadir al carrito</button>
             </div>
             <p><a className='back-to-shop' href="/products">Seguir comprando</a></p>
           </div>

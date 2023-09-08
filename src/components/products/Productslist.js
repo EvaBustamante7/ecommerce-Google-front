@@ -1,17 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useParams } from 'react-router-dom';
+import { useCart } from './CartContext'; // Importa useCart
 
 const ProductList = () => {
-  const { id } = useParams();
+  const { addToCart } = useCart(); // Obtiene la función addToCart del contexto
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
   const [total, setTotal] = useState(0);
-
-  const addToCart = (product) => {
-    const updatedCart = [...cart, product];
-    setCart(updatedCart);
-  };
 
   useEffect(() => {
     const storedCart = localStorage.getItem('cart');
@@ -32,6 +27,10 @@ const ProductList = () => {
     setTotal(totalPrice);
   }, [cart]);
 
+  const handleAddToCart = (product) => {
+    addToCart(product);
+  };
+
   return (
     <>
       <h1>Productos</h1>
@@ -43,7 +42,7 @@ const ProductList = () => {
               <img src={`http://127.0.0.1:8000/uploads/brochures/${product.image}`} alt={product.name} />
               <img src={`http://127.0.0.1:8000/uploads/brochures/${product.qr}`} alt={`${product.name}QR`} />
               <p>Precio: {product.price} €</p>
-              <button onClick={() => addToCart(product)}>Añadir al carrito</button>
+              <button onClick={() => handleAddToCart(product)}>Añadir al carrito</button>
               <Link to={`/products/${product.id}`}>Ver Detalles</Link>
             </div>
           ))}
