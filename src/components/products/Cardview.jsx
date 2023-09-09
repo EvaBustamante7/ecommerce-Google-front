@@ -6,7 +6,7 @@ const Cardview = ({ handleClick }) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    // Llamada a la API para obtener los productos
+   
     fetch("http://127.0.0.1:8000/api/products")
       .then((response) => response.json())
       .then((data) => setProducts(data))

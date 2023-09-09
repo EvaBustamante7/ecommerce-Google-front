@@ -53,13 +53,12 @@ const Navbar = ({ setShow }) => {
                 <li><Link className='hide-icons' to='/log'>
                     <VscAccount size={25} style={{ color: 'black' }} />
                 </Link></li>
-                <div className="nav_box">
-                  <div className="cart" onClick={() => setShow(false)}>
+                  <div onClick={() => setShow(false)}>
                       <li className='hide-icons'>
                           <FaShoppingCart size={25} style={{ color: 'black' }} />
                       </li>
                   </div>
-                </div>
+                
 
             </ul>
         </div>
