@@ -1,0 +1,40 @@
+@import '../../../index-css/_colors.scss';
+/* Cookies.scss */
+.cookie {
+    background-color: $white;
+    padding: 20px;
+    border: 1px solid $white;
+    margin: 150px auto;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px $black;
+    width: 700px;
+  
+    p {
+      margin: 0;
+    }
+  
+    h2 {
+      margin-top: 20px;
+    }
+  
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+    li {
+     padding: 10px auto;
+
+    }
+  }
+  
+  /* Media query para dispositivos pequeños */
+  @media (max-width: 768px) {
+    .cookie {
+      font-size: 14px;
+      margin: 120px auto; 
+      padding: 20px;
+      max-width: 700px; 
+      width: 90%;
+    }
+  }
+  
