@@ -1,40 +1,50 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from "react";
+import "./css/cart.css";
 
-const Cart = () => {
-  const [cart, setCart] = useState([]);
-  const [total, setTotal] = useState(0);
+const Cart = ({ cart, setCart, handleChange }) => {
+  const [price, setPrice] = useState(0);
 
-  const eliminarProducto = (id) => {
-    const updatedCart = cart.filter((product) => product.id !== id);
-    setCart(updatedCart);
+  const handleRemove = (id) => {
+    const arr = cart.filter((item) => item.id !== id);
+    setCart(arr);
+    handlePrice();
+  };
+
+  const handlePrice = () => {
+    let ans = 0;
+    cart.map((item) => (ans += item.amount * item.price));
+    setPrice(ans);
   };
 
   useEffect(() => {
-    const storedCart = localStorage.getItem('cart');
-    if (storedCart) {
-      setCart(JSON.parse(storedCart));
-    }
-  }, []);
-
-  useEffect(() => {
-    const totalPrice = cart.reduce((sum, product) => sum + product.price, 0);
-    setTotal(totalPrice);
-  }, [cart]);
+    handlePrice();
+  });
+  
 
   return (
-    <>
-      <h2>Carrito de Compras</h2>
-      <div className='cart'>
-        {cart.map((product) => (
-          <div className='cart-item' key={product.id}>
-            <h4>{product.name}</h4>
-            <p>Precio: {product.price} €</p>
-            <button onClick={() => eliminarProducto(product.id)}>Eliminar</button>
+    <article>
+      {cart.map((item) => (
+        <div className="cart_box" key={item.id}>
+          <div className="cart_img">
+            <img src={item.img} alt="" />
+            <p>{item.title}</p>
           </div>
-        ))}
-        <p>Total: {total} €</p>
+          <div>
+            <button onClick={() => handleChange(item, 1)}>+</button>
+            <button>{item.amount}</button>
+            <button onClick={() => handleChange(item, -1)}>-</button>
+          </div>
+          <div>
+            <span>{item.price}</span>
+            <button onClick={() => handleRemove(item.id)}>Remove</button>
+          </div>
+        </div>
+      ))}
+      <div className="total">
+        <span>Total Price of your Cart</span>
+        <span>Rs - {price}</span>
       </div>
-    </>
+    </article>
   );
 };
 
