@@ -1,16 +1,29 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect ,useContext} from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars, FaTimes, FaShoppingCart } from 'react-icons/fa';
 import { VscAccount } from 'react-icons/vsc';
 import Logo from '../logo/G3DA.svg';
 import './css/Navbar.css';
-import Cart from '../products/Cart'; // Importamos el componente Cart
+import { CartContext } from "../../contexts/ShoppingCartContext";
+// import Cart from '../products/Cart'; // Importamos el componente Cart
 
 const Navbar = () => {
+  const [ccart, csetCart] = useState([]);
   const [click, setClick] = useState(false);
   const [showCart, setShowCart] = useState(false); // Estado para controlar la visibilidad del componente Cart
   const handleClick = () => setClick(!click);
   const [color, setColor] = useState(false);
+  const [cart, setCart] = useContext(CartContext);
+
+  const quantity = cart.reduce((acc, curr) => {
+    return acc + curr.quantity;
+  }, 0);
+
+  const navStyles = {
+    color: "#fff",
+    listStyle: "none",
+    textDecoration: "none",
+  };
 
   const changeColor = () => {
     if (window.scrollY >= 100) {
@@ -73,12 +86,19 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link className='hide-icons' to='#' onClick={handleCartClick}> {/* Agregamos el evento onClick para mostrar el componente Cart */}
+        <ul className="nav-list">
+        <Link to={"/cart"} style={navStyles}>
+          <li>
+            Cart items: <span className="cart-count">{quantity}</span>
+          </li>
+        </Link>
+      </ul>
+           {/* <Link className='hide-icons' to='#' onClick={handleCartClick}> 
             <FaShoppingCart size={25} style={{ color: 'black' }} />
-          </Link>
+          </Link>  */}
         </li>
       </ul>
-      {showCart && <Cart />} {/* Mostramos el componente Cart si showCart es verdadero */}
+      {/* {showCart && <Cart ccart={ccart} csetCart={csetCart} />}  */}
     </div>
   );
 };
