@@ -27,10 +27,10 @@ const Navbar = () => {
                 <div className='hamburger' onClick={handleClick}>
                     {click ? (<FaTimes size={25} style={{ color: 'black', margin: '0 10px' }} />) : <FaBars size={25} style={{ color: 'black', margin: '0 10px' }} />}
                     <Link to='/log'>
-                        <VscAccount size={25} style={{ color: 'black', margin: '0 10px' }} />
+                        <VscAccount data-testid="log-icon" size={25} style={{ color: 'black', margin: '0 10px' }} />
                     </Link>
                     <Link to='/shop'>
-                        <FaShoppingCart size={25} style={{ color: 'black', margin: '0 10px' }} />
+                        <FaShoppingCart data-testid="cart-icon" size={25} style={{ color: 'black', margin: '0 10px' }} />
                     </Link>
                 </div>
             </div>
