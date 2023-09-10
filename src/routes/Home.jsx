@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Banner from '../components/banner/Banner'
 import Footer from '../components/footer/Footer'
 import Navbar from '../components/navbar/Navbar'
@@ -11,9 +11,10 @@ import Metaverso1 from '../components/assets/Metaverso.mp4'
 
 
 const Home = () => {
+  const [cart] = useState([]);
   return (
     <>
-    <Navbar/>
+    <Navbar size={cart.length}/>
     <LogoViewer/>
     <Carrusel/>
     <ModelViewer/>

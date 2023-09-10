@@ -1,0 +1,59 @@
+/*Paleta oscura*/
+/*Paleta clara*/
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin: 120px 200px;
+}
+@media (max-width: 768px) {
+  .product-list {
+    grid-template-columns: 1fr;
+    margin: 100px 20px;
+  }
+}
+
+.product-card {
+  width: 500px;
+  background-color: #f2f2f2;
+  border: 1px solid #EFEAE5;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.product-card .product-title {
+  font-size: 25px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+.product-card .product-image {
+  width: 100%;
+  height: auto;
+}
+.product-card .product-qr {
+  width: 100px;
+  height: auto;
+}
+.product-card .product-price {
+  font-size: 16px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-left: 15px;
+}
+.product-card .button-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-card .button-flex .button-link {
+  background-color: #4186C7;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+.product-card .button-flex .button-link:hover {
+  background-color: #7CB2E0;
+}/*# sourceMappingURL=cardview.css.map */

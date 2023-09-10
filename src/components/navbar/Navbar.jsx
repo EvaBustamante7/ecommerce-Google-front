@@ -5,7 +5,8 @@ import { VscAccount } from 'react-icons/vsc';
 import Logo from '../logo/G3DA.svg';
 import './css/Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({ setShow, size }) => {
+
     const [click, setClick] = useState(false);
     const handleClick = () => setClick(!click);
 
@@ -29,9 +30,9 @@ const Navbar = () => {
                     <Link to='/log'>
                         <VscAccount data-testid="log-icon" size={25} style={{ color: 'black', margin: '0 10px' }} />
                     </Link>
-                    <Link to='/shop'>
+                    <li onClick={() => setShow(false)}>
                         <FaShoppingCart data-testid="cart-icon" size={25} style={{ color: 'black', margin: '0 10px' }} />
-                    </Link>
+                    </li>
                 </div>
             </div>
             <ul className={click ? 'nav-menu active' : 'nav-menu'}>
@@ -53,10 +54,10 @@ const Navbar = () => {
                 <li><Link className='hide-icons' to='/log'>
                     <VscAccount size={25} style={{ color: 'black' }} />
                 </Link></li>
-                <li><Link className='hide-icons' to='/shop'>
-                    <FaShoppingCart size={25} style={{ color: 'black' }} />
-                </Link></li>
-
+                <li className="cart" onClick={() => setShow(false)}>
+                    <FaShoppingCart className='hide-icons' size={25} style={{ color: 'black' }} />
+                    <span>{size}</span>
+                </li>
             </ul>
         </div>
     );
