@@ -34,13 +34,18 @@
   text-decoration: none;
   box-sizing: border-box;
 
+
+}
+   
+  body {
+   
   
 #Dark {
   background-color: #282c34;
   color: white;
 }
 #Dark a{
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 #Light {
@@ -53,9 +58,6 @@
   padding-left:3px;
   padding-right:3px;
 }
-   
-  body {
-   
     h1 {
       @include title;
     }

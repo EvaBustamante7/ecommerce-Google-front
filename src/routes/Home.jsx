@@ -8,11 +8,14 @@ import ModelViewer from '../components/modelviewer/model_viewer'
 import LogoViewer from '../components/logoViewer/logoViewer'
 import Metaverso from '../components/Metaverso/Metaverso'
 import Metaverso1 from '../components/assets/Metaverso.mp4'
+import { useThemeContext } from '../context/ThemeContext'
 
 
 const Home = () => {
+  const {contextTheme} = useThemeContext()    
   return (
     <>
+    <div className="container-fluid">{contextTheme}</div>
     <Navbar/>
     <LogoViewer/>
     <Carrusel/>

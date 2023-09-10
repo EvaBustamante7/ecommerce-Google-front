@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './routes/Home';
 import Contact from './routes/Contact';
@@ -9,11 +9,15 @@ import About from './components/about/About';
 import Productdetail from './routes/Productdetail';
 import Loger from './routes/Loger';
 import Regroute from './routes/Regroute';
+import { useThemeContext } from './context/ThemeContext';
 
 
 function App() {
+  const {contextTheme, setContextTheme} = useThemeContext()
   return (
     <div>
+      {contextTheme}
+    
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/contact' element={<Contact/>} />
