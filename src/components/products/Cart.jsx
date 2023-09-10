@@ -37,13 +37,13 @@ const Cart = ({ cart, setCart, handleChange }) => {
           </div>
           <div>
             <span>{product.price}</span>
-            <button onClick={() => handleRemove(product.id)}>Remove</button>
+            <button onClick={() => handleRemove(product.id)}>Eliminar</button>
           </div>
         </div>
       ))}
       <div className="total">
-        <span>Total Price of your Cart</span>
-        <span>€ - {price}</span>
+        <span>Total de tu compra</span>
+        <span>{price} €</span>
       </div>
     </article>
   );

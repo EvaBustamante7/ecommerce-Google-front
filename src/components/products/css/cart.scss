@@ -1,20 +1,24 @@
+@import '../../../index-css/_colors.scss';
+
 article {
     width: 60%;
-    margin: 300px;
+    margin: 150px auto;
   }
   
   .cart_box img {
-    width: 50px;
-    height: 50px;
+    width: 150px;
+    height: 150px;
   }
   .cart_img {
     display: flex;
     width: 400px;
-  }
+    align-items: center;
+    margin-bottom: 20px;
   
-  .cart_img p {
+    p {
     font-weight: bold;
-    margin-left: 10px;
+    margin-left: 20px;
+  }
   }
   
   .cart_box {
@@ -33,21 +37,19 @@ article {
   }
   
   .cart_box div:nth-child(3) button {
-    padding: 5px 10px;
-    font-weight: bold;
-    letter-spacing: 2px;
+    background-color: $blue;
+    color: $white;
     border: none;
-    outline: none;
-    color: white;
-    background-color: skyblue;
+    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
   }
   .cart_box div:nth-child(3) button:hover {
-    background-color: darkseagreen;
+    background-color: $blue_1;
   }
   .cart_box div:nth-child(3) span {
-    background-color: lightgreen;
+    background-color: $green;
     padding: 5px 10px;
     border-radius: 5px;
     margin-right: 10px;
@@ -56,17 +58,45 @@ article {
   .total {
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
   }
   
   .total span:nth-child(1) {
-    font-size: 2rem;
-    color: skyblue;
-    font-weight: bold;
-    letter-spacing: 2px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 2rem; 
+    letter-spacing: 1px;
+    line-height: 40px;
+    color: #3b3e40;
   }
   
   .total span:nth-child(2) {
     font-size: 2rem;
-    color: green;
+    color: $blue;
     font-weight: bold;
   }
+
+  @media (max-width: 768px) {
+    article {
+      width: 100%;
+      padding: 20px;
+      margin: 100px 50px;
+    }
+  
+    .cart_box {
+      flex-direction: column; 
+      align-items: flex-start; 
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+  
+    .cart_box div:nth-child(2) button {
+      margin-top: 10px;
+      margin-bottom: 20px;
+  
+    .total {
+      flex-direction: column;
+      margin-top: 20px;
+    }
+  }
+}

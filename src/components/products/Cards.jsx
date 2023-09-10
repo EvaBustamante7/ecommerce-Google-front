@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
+import "./css/cardview.css"; // Asegúrate de importar tu archivo SASS aquí.
 
 const Cards = ({ handleClick }) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    
     fetch("http://127.0.0.1:8000/api/products")
       .then((response) => response.json())
       .then((data) => setProducts(data))
@@ -12,37 +12,30 @@ const Cards = ({ handleClick }) => {
   }, []);
 
   return (
-  <div className='product-list'>
-            {products.map(product => (
-              <div className='product' key={product.id}>
-                <h3>{product.name}</h3>
-                <img src={`http://127.0.0.1:8000/uploads/brochures/${product.image}`} alt={product.name} />
-                <img src={`http://127.0.0.1:8000/uploads/brochures/${product.qr}`} alt={`${product.name}QR`} />
-
-                <p>Precio: {product.price} €</p>
-                <button onClick={() => handleClick(product)}>Add to Cart</button>
-                
-              </div>
-            ))}
+    <div className="product-list">
+      {products.map((product) => (
+        <div className="product-card" key={product.id}>
+          <h3 className="product-title">{product.name}</h3>
+          <img
+            src={`http://127.0.0.1:8000/uploads/brochures/${product.image}`}
+            alt={product.name}
+            className="product-image"
+          />
+          <p className="product-price">Precio: {product.price} €</p>
+          <img
+            src={`http://127.0.0.1:8000/uploads/brochures/${product.qr}`}
+            alt={`${product.name} QR`}
+            className="product-qr"
+          />
+          <div className="button-flex">
+            <button onClick={() => handleClick(product)} className="button-link">
+              Agregar al Carrito
+            </button>
           </div>
-
-    // <div className="cards">
-    //   {products.map((product) => (
-    //     <div key={product.id} className="product-card">
-    //       <div className="image_box">
-    //         <img src={product.img} alt="" />
-    //         <img src={product.qr} alt="" />
-    //       </div>
-    //       <div className="details">
-    //         <p>{product.name}</p>
-    //         <p>Price - {product.price}Rs</p>
-    //         <button onClick={() => handleClick(product)}>Add to Cart</button>
-    //       </div>
-    //     </div>
-    //   ))}
-    // </div>
+        </div>
+      ))}
+    </div>
   );
 };
 
 export default Cards;
-

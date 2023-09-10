@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Cards from "./Cards";
-import "./css/cardview.css";
+
 
 const Cardview = ({ handleClick }) => {
   const [products, setProducts] = useState([]);

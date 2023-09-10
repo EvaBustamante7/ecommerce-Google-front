@@ -6,7 +6,7 @@ import Logo from '../logo/G3DA.svg';
 import './css/Navbar.css';
 
 const Navbar = ({ setShow, size }) => {
-    
+
     const [click, setClick] = useState(false);
     const handleClick = () => setClick(!click);
 
@@ -31,9 +31,8 @@ const Navbar = ({ setShow, size }) => {
                         <VscAccount size={25} style={{ color: 'black', margin: '0 10px' }} />
                     </Link>
                     <li onClick={() => setShow(false)}>
-                    <FaShoppingCart size={25} style={{ color: 'black' }} />
-                    <span>{size}</span>
-                </li>
+                        <FaShoppingCart size={25} style={{ color: 'black', margin: '0 10px' }} />
+                    </li>
                 </div>
             </div>
             <ul className={click ? 'nav-menu active' : 'nav-menu'}>
@@ -59,13 +58,6 @@ const Navbar = ({ setShow, size }) => {
                     <FaShoppingCart className='hide-icons' size={25} style={{ color: 'black' }} />
                     <span>{size}</span>
                 </li>
-                {/* <div onClick={() => setShow(false)}>
-                      <li className='hide-icons'>
-                          <FaShoppingCart size={25} style={{ color: 'black' }} />
-                      </li>
-                  </div> */}
-
-
             </ul>
         </div>
     );

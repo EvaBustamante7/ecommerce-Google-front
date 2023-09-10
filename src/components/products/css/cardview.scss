@@ -1,43 +1,65 @@
-section {
-    width: 80%;
-    margin: auto;
-    margin-top: 5%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
+@import '../../../index-css/_colors.scss';
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin: 120px 200px;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;  
+    margin: 100px 20px; 
   }
-  .cards {
-    width: 250px;
-    padding: 20px;
+}
+
+
+.product-card {
+  width: 500px;
+  background-color: $color_footer;
+  border: 1px solid #EFEAE5;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  .product-title {
+    font-size: 25px;
+    margin-bottom: 8px;
+    text-align: center;
   }
-  .cards:hover {
-    box-shadow: 0 10px 10px 10px rbga(0, 0, 0, 0.1);
-    cursor: pointer;
+
+  .product-image {
+    width: 100%;
+    height: auto;
   }
-  .image_box img {
-    width: 150px;
-    height: 200px;
+
+  .product-qr {
+    width: 100px;
+    height: auto;
   }
-  
-  .image_box img {
-    width: 150px;
-    height: 200px;
+
+  .product-price {
+    font-size: 16px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: 15px;
   }
-  .details p:nth-child(1) {
-    font-weight: bold;
-  }
-  .details p:nth-child(2) {
-    color: grey;
-    font-size: 0.8rem;
-  }
-  .details p:nth-child(3) {
-    font-weight: bolx;
-    color: grey;
-  }
-  .details button {
-    padding: 5px 10px;
+.button-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .button-link {
+    background-color: $blue;
+    color: $white;
     border: none;
-    font-weight: bold;
-    background-color: skyblue;
-    outline: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+    
+    &:hover {
+      background-color: $blue_1; 
+    }
   }
+
+}
+  
+}
