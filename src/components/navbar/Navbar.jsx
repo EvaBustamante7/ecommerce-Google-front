@@ -5,7 +5,8 @@ import { VscAccount } from 'react-icons/vsc';
 import Logo from '../logo/G3DA.svg';
 import './css/Navbar.css';
 
-const Navbar = ({ setShow }) => {
+const Navbar = ({ setShow, size }) => {
+    
     const [click, setClick] = useState(false);
     const handleClick = () => setClick(!click);
 
@@ -29,9 +30,10 @@ const Navbar = ({ setShow }) => {
                     <Link to='/log'>
                         <VscAccount size={25} style={{ color: 'black', margin: '0 10px' }} />
                     </Link>
-                    <Link to='/shop'>
-                        <FaShoppingCart size={25} style={{ color: 'black', margin: '0 10px' }} />
-                    </Link>
+                    <li onClick={() => setShow(false)}>
+                    <FaShoppingCart size={25} style={{ color: 'black' }} />
+                    <span>{size}</span>
+                </li>
                 </div>
             </div>
             <ul className={click ? 'nav-menu active' : 'nav-menu'}>
@@ -53,12 +55,16 @@ const Navbar = ({ setShow }) => {
                 <li><Link className='hide-icons' to='/log'>
                     <VscAccount size={25} style={{ color: 'black' }} />
                 </Link></li>
-                  <div onClick={() => setShow(false)}>
+                <li className="cart" onClick={() => setShow(false)}>
+                    <FaShoppingCart className='hide-icons' size={25} style={{ color: 'black' }} />
+                    <span>{size}</span>
+                </li>
+                {/* <div onClick={() => setShow(false)}>
                       <li className='hide-icons'>
                           <FaShoppingCart size={25} style={{ color: 'black' }} />
                       </li>
-                  </div>
-                
+                  </div> */}
+
 
             </ul>
         </div>

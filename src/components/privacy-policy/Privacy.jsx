@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react'
 import './css/Privacy.css';
 import Navbar from '../navbar/Navbar';
 import Footer from '../footer/Footer'
 
 const Privacy = () => {
+    const [cart] = useState([]);
 
     return (
         <>
-            <Navbar />
+            <Navbar size={cart.length} />
+            
             <div className="privacy-policy">
                 <h1>Política de Privacidad</h1>
 

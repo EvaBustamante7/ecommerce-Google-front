@@ -1,16 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react'
 import './css/Cookies.css';
 import Navbar from '../navbar/Navbar';
 import Footer from '../footer/Footer'
 
 const Cookies = () => {
+  const [cart] = useState([]);
 
   return (
     <>
-      <Navbar />
+      <Navbar size={cart.length} />
 
       <div className="cookie">
-        <p>Política de Privacidad de Cookies</p>       
+        <p>Política de Privacidad de Cookies</p>
         <p>Última actualización: [08/09/2023]</p>
 
         <h2>1. Introducción</h2>

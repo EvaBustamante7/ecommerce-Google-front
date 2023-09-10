@@ -34,7 +34,8 @@ nav {
 
 .cart span:nth-child(2) {
   padding: 0 3px;
-  background-color: red;
+  margin: auto 5px;
+  background-color: black;
   color: white;
   font-weight: bolx;
   border-radius: 5px;

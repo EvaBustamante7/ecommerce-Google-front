@@ -52,3 +52,20 @@
       monospace;
   }
 }
+.cart {
+  cursor: pointer;
+}
+.cart span:nth-child(1) {
+  font-size: 2rem;
+  color: white;
+}
+.cart span:nth-child(2) {
+  padding: 0 3px;
+  margin: auto 5px;
+  background-color: rgb(32, 32, 32);
+  color: white;
+  font-weight: bolx;
+  border-radius: 5px;
+  position: relative;
+  top: -15px;
+}
