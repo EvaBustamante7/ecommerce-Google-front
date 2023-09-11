@@ -88,25 +88,14 @@ const Navbar = () => {
             <FaShoppingCart size={25} style={{ color: 'black' }} />
           </Link>
         </li>
-      </ul>
-      <div>
-
-        
-        
-        <button
-          //onClick={handleSwitch}
-          //checked={checked}
-        
-          className='react-switch'
-          id='material-switch'
-        >click</button>
-
-        <Switch 
-            onChange={handleSwitch}
-            checked={checked}
+        <li className='switch-responsive'>
+        <Switch
+          onChange={handleSwitch}
+          checked={checked}
         />
-
-      </div>
+      </li>
+      </ul>
+      
     </div>
   );
 };

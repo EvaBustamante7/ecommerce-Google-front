@@ -84,4 +84,8 @@
   .nav-menu a {
     font-size: 2rem;
   }
+  .switch-responsive {
+    width: 25px;
+    height: 20px;
+  }
 }/*# sourceMappingURL=Navbar.css.map */

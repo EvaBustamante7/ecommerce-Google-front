@@ -13,24 +13,47 @@
   box-sizing: border-box;
 }
 
-#Dark a {
-  color: rgb(255, 255, 255);
-}
-
 #Light {
-  background-color: #f2f4f6;
+  background-color: #f2f2f2;
   color: #0d3f67;
 }
 
-body #Dark {
-  background-color: #282c34;
+#Dark {
+  background-color: #242323;
+}
+#Dark a {
+  color: #ffffff;
+}
+#Dark p {
   color: white;
 }
-body .list li {
-  display: inline-block;
-  padding-left: 3px;
-  padding-right: 3px;
+#Dark h1, #Dark h2, #Dark h3 {
+  color: white;
 }
+#Dark .footer-container {
+  background-color: #8d9295;
+}
+#Dark .social-icons {
+  background-color: #8d9295;
+}
+#Dark .bottom-bar {
+  background-color: #8d9295;
+}
+#Dark .header {
+  background-color: #8d9295;
+}
+#Dark .widget-1 {
+  background-color: #61676b;
+}
+#Dark .carousel-container {
+  background-color: #61676b;
+  border-radius: 20px;
+  padding: 40px;
+}
+#Dark element.style {
+  color: white;
+}
+
 body h1 {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
