@@ -13,7 +13,7 @@ const About = () => {
         <>
             <Navbar size={cart.length} />
             <Banner title="Google 3D Aesthetic "
-                text="Nuestro equipo de trabajo es un equipo pluridisciplinar , formado por cinco componentes amantes del arte. Encargándonos  de ofrecerte una  una amplia variedad de NFTs únicos. Nuestra misión será que disfrutes de la mejor experiencia."
+                text="Nuestro equipo de trabajo es un equipo pluridisciplinar , formado por cinco componentes amantes del arte. Encargándonos  de ofrecerte  una amplia variedad de NFTs únicos. Nuestra misión será que disfrutes de la mejor experiencia."
                 image={imagen}
             />
             <Banner title=" Sostenibilidad"
