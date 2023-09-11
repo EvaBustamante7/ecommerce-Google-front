@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./css/cardview.css"; // Asegúrate de importar tu archivo SASS aquí.
+import "./css/cardview.css"; 
 
 const Cards = ({ handleClick }) => {
   const [products, setProducts] = useState([]);
