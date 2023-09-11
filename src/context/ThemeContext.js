@@ -1,13 +1,17 @@
 import { createContext, useContext, useState } from "react";
+import '../index-css/index.css'
 
 export const ThemeContext = createContext()
 
 export const ThemeContextProvider = ({children}) => {
-    const [contextTheme, setContextTheme] = useState('Dark')   
-    const values = {contextTheme, setContextTheme}    
+    const [contextTheme, setContextTheme] = useState('Light')   
+    const values = {contextTheme, setContextTheme}
+
     return (        
         <ThemeContext.Provider value={values}>
-            {children}
+
+                {children}
+
         </ThemeContext.Provider>
     )
 }

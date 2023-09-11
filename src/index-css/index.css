@@ -12,21 +12,40 @@
   text-decoration: none;
   box-sizing: border-box;
 }
-* body h1 {
+
+#Dark a {
+  color: rgb(255, 255, 255);
+}
+
+#Light {
+  background-color: #f2f4f6;
+  color: #0d3f67;
+}
+
+body #Dark {
+  background-color: #282c34;
+  color: white;
+}
+body .list li {
+  display: inline-block;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+body h1 {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   letter-spacing: -1px;
   line-height: 40px;
   color: #3b3e40;
 }
-* body h2, * body h3, * body h4, * body label {
+body h2, body h3, body h4, body label {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   letter-spacing: -1px;
   line-height: 40px;
   color: #61676b;
 }
-* body p, * body a {
+body p, body a {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -34,6 +53,7 @@
   line-height: 24px;
   color: #232222;
 }
-* code {
+
+code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }/*# sourceMappingURL=index.css.map */

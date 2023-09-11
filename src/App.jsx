@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../src/index-css/index.css';
 import { Routes, Route } from 'react-router-dom';
 import Home from './routes/Home';
 import Contact from './routes/Contact';
@@ -15,8 +16,7 @@ import { useThemeContext } from './context/ThemeContext';
 function App() {
   const {contextTheme, setContextTheme} = useThemeContext()
   return (
-    <div>
-      {contextTheme}
+    <div id={contextTheme}>
     
       <Routes>
         <Route path='/' element={<Home/>} />

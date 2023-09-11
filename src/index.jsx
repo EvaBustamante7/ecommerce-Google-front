@@ -8,10 +8,10 @@ import { ThemeContextProvider } from './context/ThemeContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <ThemeContextProvider>
     <BrowserRouter>
-    <App />
-  </BrowserRouter>
-  </ThemeContextProvider>
+      <ThemeContextProvider >
+        <App />
+      </ThemeContextProvider>
+    </BrowserRouter>
  
 );
