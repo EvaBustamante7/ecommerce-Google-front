@@ -83,7 +83,7 @@ const Navbar = ({ setShow, size }) => {
           </Link>
         </li>
         <li className="cart" onClick={() => setShow(false)}>
-          <FaShoppingCart className='hide-icons' size={25} style={{ color: 'black' }} />
+          <FaShoppingCart  className='hide-icons' size={25} style={{ color: 'black' }} />
           <span>{size}</span>
         </li>
         <li className='switch-responsive'>
