@@ -14,7 +14,6 @@
 }
 
 #Light {
-  background-color: #f2f2f2;
   color: #0d3f67;
 }
 
@@ -27,7 +26,9 @@
 #Dark p {
   color: white;
 }
-#Dark h1, #Dark h2, #Dark h3 {
+#Dark h1,
+#Dark h2,
+#Dark h3 {
   color: white;
 }
 #Dark .footer-container {
@@ -50,9 +51,6 @@
   border-radius: 20px;
   padding: 40px;
 }
-#Dark element.style {
-  color: white;
-}
 
 body h1 {
   font-family: "Roboto", sans-serif;
@@ -61,14 +59,18 @@ body h1 {
   line-height: 40px;
   color: #3b3e40;
 }
-body h2, body h3, body h4, body label {
+body h2,
+body h3,
+body h4,
+body label {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   letter-spacing: -1px;
   line-height: 40px;
   color: #61676b;
 }
-body p, body a {
+body p,
+body a {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 400;
