@@ -9,10 +9,10 @@ const Footer = () => {
   return (
     <footer>
       <div className="social-icons">
-        <a href="https://www.facebook.com/" className="icon"><FontAwesomeIcon icon={faFacebook} /></a>
-        <a href="https://twitter.com/?lang=es" className="icon"><FontAwesomeIcon icon={faTwitter} /></a>
-        <a href="https://www.instagram.com/" className="icon"><FontAwesomeIcon icon={faInstagram} /></a>
-        <a href="https://www.linkedin.com/" className="icon"><FontAwesomeIcon icon={faLinkedin} /></a>
+        <a href="https://www.facebook.com/" className="icon" data-testid="facebook-icon"><FontAwesomeIcon icon={faFacebook} /></a>
+        <a href="https://twitter.com/?lang=es" className="icon" data-testid="twitter-icon"><FontAwesomeIcon icon={faTwitter} /></a>
+        <a href="https://www.instagram.com/" className="icon" data-testid="instagram-icon"><FontAwesomeIcon icon={faInstagram} /></a>
+        <a href="https://www.linkedin.com/" className="icon" data-testid="linkedin-icon"><FontAwesomeIcon icon={faLinkedin} /></a>
       </div>
 
       <div className="footer-container">
@@ -53,7 +53,7 @@ const Footer = () => {
       </div>
 
       <div className="bottom-bar">
-        <p>&copy; 2023 Google3da. All rights reserved. <a href="/Platform terms">Platform terms.</a><a href="/ Privacy policy">Privacy policy.</a><a href="/ Cookie Policy"> Cookie Policy</a></p>
+      <p>&copy; 2023 Google3da. Proyecto pedagógico. <a href="/Platform terms">Platform terms.</a> <Link to="/privacy-policy">Política de privacidad.</Link> <Link to="/cookies">Política de cookies</Link></p>
       </div>
     </footer>
 

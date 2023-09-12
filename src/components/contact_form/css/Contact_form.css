@@ -1,46 +1,186 @@
-@charset "UTF-8";
 /*Paleta oscura*/
 /*Paleta clara*/
-label {
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.screen {
+  background: linear-gradient(90deg, rgb(190, 186, 186), rgb(186, 179, 179));
+  position: relative;
+  height: 500px;
+  width: 360px;
+  box-shadow: 0px 0px 15px rgb(140, 140, 140);
+  margin-top: 100px;
+}
+
+.screen__contact {
+  background: linear-gradient(90deg, rgb(190, 186, 186), rgb(186, 179, 179));
+  position: relative;
+  height: auto;
+  width: 410px;
+  box-shadow: 0px 0px 15px rgb(140, 140, 140);
+  margin-top: 120px;
+}
+
+.screen__content {
+  z-index: 1;
+  position: relative;
+  height: 100%;
+}
+
+.screen__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  -webkit-clip-path: inset(0 0 0 0);
+  clip-path: inset(0 0 0 0);
+}
+
+.screen__background__shape {
+  transform: rotate(45deg);
+  position: absolute;
+}
+
+.screen__background__shape1 {
+  height: 520px;
+  width: 520px;
+  background: #FFF;
+  top: -50px;
+  right: 120px;
+  border-radius: 0 72px 0 0;
+}
+
+.screen__background__shape2 {
+  height: 220px;
+  width: 220px;
+  background: #5FBD5C;
+  top: -172px;
+  right: 0;
+  border-radius: 32px;
+}
+
+.screen__background__shape3 {
+  height: 540px;
+  width: 190px;
+  background: linear-gradient(270deg, #4186C7, #4186C7);
+  top: -24px;
+  right: 0;
+  border-radius: 32px;
+}
+
+.screen__background__shape4 {
+  height: 400px;
+  width: 200px;
+  background: rgb(255, 236, 33);
+  top: 420px;
+  right: 50px;
+  border-radius: 60px;
+}
+
+.contact {
+  width: 340px;
+  margin: 25px auto;
+  padding: 20px;
+  border: 1px solid #EFEAE5;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+
+.login__field {
+  padding: 20px 0px;
+  position: relative;
+}
+
+.login__icon {
+  position: absolute;
+  top: 30px;
   color: #000000;
 }
 
-#contactForm {
-  padding: 1rem;
-  margin: auto;
-  margin-top: 80px;
-  max-width: 600px;
-  box-sizing: border-box;
-  /* Añadido para incluir el padding en el ancho */
-  overflow-y: auto;
-  /* Añadido para permitir el scroll si el formulario es largo */
-  height: calc(100vh - 90px);
-  /* Ajustado para ocupar el espacio vertical disponible */
-  display: flex;
-  flex-direction: column;
+.login__input {
+  border: none;
+  border-bottom: 2px solid #2e2e31;
+  background: none;
+  padding: 10px;
+  padding-left: 24px;
+  font-weight: 700;
+  width: 75%;
+  transition: 0.2s;
 }
-#contactForm label {
-  margin-bottom: 0.5rem;
+
+.login__input:active,
+.login__input:focus,
+.login__input:hover {
+  outline: none;
+  border-bottom-color: #000000;
 }
-#contactForm input,
-#contactForm textarea {
-  margin-bottom: 1rem;
-  padding: 10px 18px;
-  font-size: 1.2rem;
-  font-family: "Outfit", sans-serif;
-  border-color: #7CB2E0;
-  color: black;
-}
-#contactForm .btn {
+
+.login__submit {
+  background: #fff;
+  font-size: 14px;
   margin-top: 15px;
-  padding: 12px 32px;
-  font-size: 1.2rem;
-  background: #ef6c67;
-  color: black;
-  border: 1px solid rgb(167, 18, 97);
-  border-radius: 5px;
+  margin-bottom: 25px;
+  padding: 16px 20px;
+  border-radius: 26px;
+  border: 1px solid #D4D3E8;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: #252323;
+  box-shadow: 0px 2px 2px #272728;
   cursor: pointer;
+  transition: 0.2s;
 }
-#contactForm .btn:hover {
-  background: #EF3C35;
+
+.login__submit:active,
+.login__submit:focus,
+.login__submit:hover {
+  border-color: #6A679E;
+  outline: none;
+}
+
+.button__icon {
+  font-size: 24px;
+  margin-left: auto;
+  color: #1d1d1e;
+}
+
+.social-login {
+  position: absolute;
+  height: 140px;
+  width: 160px;
+  text-align: center;
+  bottom: 0px;
+  right: 0px;
+  color: #fff;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-login__icon {
+  padding: 20px 10px;
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 0px 0px 8px #7875B5;
+}
+
+.social-login__icon:hover {
+  transform: scale(1.5);
+}
+
+.recaptcha {
+  margin: 10px auto;
 }/*# sourceMappingURL=Contact_form.css.map */

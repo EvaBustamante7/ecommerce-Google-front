@@ -4,11 +4,10 @@ import { FaBars, FaTimes, FaShoppingCart } from 'react-icons/fa';
 import { VscAccount } from 'react-icons/vsc';
 import Logo from '../logo/G3DA.svg';
 import './css/Navbar.css';
-//import ReactSwitch from 'react-switch';
-import Switch from 'react-switch'
+import Switch from 'react-switch';
 import { useThemeContext } from '../../context/ThemeContext';
 
-const Navbar = () => {
+const Navbar = ({ setShow, size }) => {
   const { contextTheme, setContextTheme } = useThemeContext();
   const [checked, setChecked] = useState(false);
 
@@ -17,8 +16,8 @@ const Navbar = () => {
     setChecked(nextChecked);
   };
 
-  console.log(contextTheme)
-  console.log(checked)
+  console.log(contextTheme);
+  console.log(checked);
 
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
@@ -37,7 +36,7 @@ const Navbar = () => {
     window.addEventListener('scroll', changeColor);
 
     return () => {
-      // Limpia el listener al desmontar el componente
+      // Limpieza del evento cuando el componente se desmonta
       window.removeEventListener('scroll', changeColor);
     };
   }, []);
@@ -45,7 +44,7 @@ const Navbar = () => {
   return (
     <div className={color ? 'header header-bg' : 'header'}>
       <Link to='/'>
-        <img id='logo' src={Logo} alt='Logo G3da' />
+        <img id='logo' src={Logo} alt="Logo G3da" />
       </Link>
       <div className='nav-wrapper'>
         <div className='hamburger' onClick={handleClick}>
@@ -55,11 +54,11 @@ const Navbar = () => {
             <FaBars size={25} style={{ color: 'black', margin: '0 10px' }} />
           )}
           <Link to='/log'>
-            <VscAccount size={25} style={{ color: 'black', margin: '0 10px' }} />
+            <VscAccount data-testid="log-icon" size={25} style={{ color: 'black', margin: '0 10px' }} />
           </Link>
-          <Link to='/shop'>
-            <FaShoppingCart size={25} style={{ color: 'black', margin: '0 10px' }} />
-          </Link>
+          <li onClick={() => setShow(false)}>
+            <FaShoppingCart data-testid="cart-icon" size={25} style={{ color: 'black', margin: '0 10px' }} />
+          </li>
         </div>
       </div>
       <ul className={click ? 'nav-menu active' : 'nav-menu'}>
@@ -83,19 +82,17 @@ const Navbar = () => {
             <VscAccount size={25} style={{ color: 'black' }} />
           </Link>
         </li>
-        <li>
-          <Link className='hide-icons' to='/shop'>
-            <FaShoppingCart size={25} style={{ color: 'black' }} />
-          </Link>
+        <li className="cart" onClick={() => setShow(false)}>
+          <FaShoppingCart className='hide-icons' size={25} style={{ color: 'black' }} />
+          <span>{size}</span>
         </li>
         <li className='switch-responsive'>
-        <Switch
-          onChange={handleSwitch}
-          checked={checked}
-        />
-      </li>
+          <Switch
+            onChange={handleSwitch}
+            checked={checked}
+          />
+        </li>
       </ul>
-      
     </div>
   );
 };
