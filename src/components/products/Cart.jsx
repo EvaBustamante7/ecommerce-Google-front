@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./css/cart.css";
+import { urlLogin } from '../../Servicies/urls';
 
 const Cart = ({ cart, setCart, handleChange }) => {
   const [price, setPrice] = useState(0);
@@ -27,6 +28,7 @@ const Cart = ({ cart, setCart, handleChange }) => {
       {cart.map((product) => (
         <div className="cart_box" key={product.id}>
           <div className="cart_img">
+            {/* <img src={`${urlLogin}/uploads/brochures/${product.image}`} alt={product.name} /> */}
             <img src={`http://127.0.0.1:8000/uploads/brochures/${product.image}`} alt={product.name} />
             <p>{product.name}</p>
           </div>

@@ -5,6 +5,7 @@ const Cards = ({ handleClick }) => {
   const [products, setProducts] = useState([]);
   
   useEffect(() => {
+    // fetch(urlLogin + '/api/products')
     fetch("http://127.0.0.1:8000/api/products")
       .then((response) => response.json())
       .then((data) => setProducts(data))
@@ -17,12 +18,14 @@ const Cards = ({ handleClick }) => {
         <div className="product-card" key={product.id}>
           <h3 className="product-title">{product.name}</h3>
           <img
+            // src={`${urlLogin}/uploads/brochures/${product.image}`}
             src={`http://127.0.0.1:8000/uploads/brochures/${product.image}`}
             alt={product.name}
             className="product-image"
           />
           <p className="product-price">Precio: {product.price} €</p>
           <img
+            // src={`${urlLogin}/uploads/brochures/${product.qr}`}
             src={`http://127.0.0.1:8000/uploads/brochures/${product.qr}`}
             alt={`${product.name} QR`}
             className="product-qr"
