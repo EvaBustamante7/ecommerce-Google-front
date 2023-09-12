@@ -12,21 +12,63 @@
   text-decoration: none;
   box-sizing: border-box;
 }
-* body h1 {
+
+#Light {
+  background-color: #f2f2f2;
+  color: #0d3f67;
+}
+
+#Dark {
+  background-color: #242323;
+}
+#Dark a {
+  color: #ffffff;
+}
+#Dark p {
+  color: white;
+}
+#Dark h1, #Dark h2, #Dark h3 {
+  color: white;
+}
+#Dark .footer-container {
+  background-color: #8d9295;
+}
+#Dark .social-icons {
+  background-color: #8d9295;
+}
+#Dark .bottom-bar {
+  background-color: #8d9295;
+}
+#Dark .header {
+  background-color: #8d9295;
+}
+#Dark .widget-1 {
+  background-color: #61676b;
+}
+#Dark .carousel-container {
+  background-color: #61676b;
+  border-radius: 20px;
+  padding: 40px;
+}
+#Dark element.style {
+  color: white;
+}
+
+body h1 {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   letter-spacing: -1px;
   line-height: 40px;
   color: #3b3e40;
 }
-* body h2, * body h3, * body h4, * body label {
+body h2, body h3, body h4, body label {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   letter-spacing: -1px;
   line-height: 40px;
   color: #61676b;
 }
-* body p, * body a {
+body p, body a {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -34,7 +76,8 @@
   line-height: 24px;
   color: #232222;
 }
-* code {
+
+code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 

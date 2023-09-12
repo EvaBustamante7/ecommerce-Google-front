@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './routes/Home';
 import Contact from './routes/Contact';
@@ -11,13 +11,16 @@ import Loger from './routes/Loger';
 import Regroute from './routes/Regroute';
 import ScrollToTop from './Scroll/ScrollToTop';
 import Products from './routes/Products';
+import { useThemeContext } from './context/ThemeContext';
+import '../src/index-css/index.css';
 
 
 
 function App() {
+  const {contextTheme, setContextTheme} = useThemeContext()
  
   return (
-    <div>
+    <div id={contextTheme}>
       <ScrollToTop/>
        
         <Routes>
