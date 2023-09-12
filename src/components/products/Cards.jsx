@@ -3,7 +3,7 @@ import "./css/cardview.css";
 
 const Cards = ({ handleClick }) => {
   const [products, setProducts] = useState([]);
-
+  
   useEffect(() => {
     fetch("http://127.0.0.1:8000/api/products")
       .then((response) => response.json())

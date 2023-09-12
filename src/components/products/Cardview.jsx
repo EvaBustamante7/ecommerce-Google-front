@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import Cards from "./Cards";
 
 
-const Cardview = () => {
-  
+const Cardview = ({handleClick}) => {
+
   return (
     <section>
-      <Cards  />
+      <Cards handleClick={handleClick} />
     </section>
   );
 };
